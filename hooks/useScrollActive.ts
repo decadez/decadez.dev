@@ -1,6 +1,8 @@
 import { useState, useEffect, RefObject } from "react";
 
-export default function useScrollActive(ref: RefObject<HTMLElement>) {
+export default function useScrollActive<T extends HTMLElement>(
+  ref: RefObject<T | null>
+) {
   const [state, setState] = useState(false);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ export default function useScrollActive(ref: RefObject<HTMLElement>) {
     return () => {
       window.removeEventListener("scroll", scrollActive);
     };
-  }, []);
+  }, [ref]);
 
   return state;
 }

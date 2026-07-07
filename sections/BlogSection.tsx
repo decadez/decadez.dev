@@ -11,7 +11,7 @@ import BlogImageCard from "@/components/BlogImageCard";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -35,17 +35,15 @@ const BlogSection: React.FC<Props> = ({ posts }) => {
   const { onSectionChange } = useSection();
   useEffect(() => {
     blogSection && onSectionChange!("blog");
-  }, [blogSection]);
+  }, [blogSection, onSectionChange]);
 
   return (
-    <div className="bg-[#F5F5F5] dark:bg-[#1B2731]">
+    <div className="bg-blogice dark:bg-blogdark">
       <section ref={sectionRef} id="blog" className="section md:px-10">
         <div className="text-center">
           <RoughNotation
             type="underline"
-            color={`${
-              theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"
-            }`}
+            color={`${theme === "light" ? "#8F79D9" : "#E3C9FA"}`}
             strokeWidth={2}
             order={1}
             show={isOnScreen}
@@ -96,7 +94,7 @@ const BlogSection: React.FC<Props> = ({ posts }) => {
             ))}
           </Swiper>
           <div className="mt-4 text-center">
-            <Link href="/blog" className="link">
+            <Link href="/blog" className="blog-link">
               Read all blog posts{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"

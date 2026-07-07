@@ -21,7 +21,7 @@ const ContactSection: React.FC = () => {
   const { onSectionChange } = useSection();
   useEffect(() => {
     contactSection && onSectionChange!("contact");
-  }, [contactSection]);
+  }, [contactSection, onSectionChange]);
 
   return (
     <section
@@ -32,7 +32,7 @@ const ContactSection: React.FC = () => {
       <div className="text-center">
         <RoughNotation
           type="underline"
-          color={`${theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"}`}
+          color={`${theme === "light" ? "#8F79D9" : "#E3C9FA"}`}
           strokeWidth={2}
           order={1}
           show={isOnScreen}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import gsap from "gsap";
@@ -49,8 +49,9 @@ const navLinks = [
 const Header: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const { currentSection } = useSection();
-  const [navClassList, setNavClassList] = useState<any>([]);
   const scroll = useScrollListener();
+  const navClassList =
+    scroll.y > 150 && scroll.y - scroll.lastY > 0 ? "!shadow-md" : "";
 
   const mainRef = useRef(null);
   const themeBtnRef = useRef<HTMLButtonElement>(null);
@@ -71,23 +72,11 @@ const Header: React.FC = () => {
     }
   }, [theme]);
 
-  // update classList of nav on scroll
-  useEffect(() => {
-    const _classList = [];
-
-    if (scroll.y > 150 && scroll.y - scroll.lastY > 0)
-      _classList.push("!shadow-md");
-
-    setNavClassList(_classList);
-  }, [scroll.y, scroll.lastY]);
-
   return (
     <header className="md:flex">
       <div
         ref={mainRef}
-        className={`main-nav lower-glassmorphism bg-bglight dark:bg-bgdark z-30 top-0 shadow-sm fixed duration-400 px-4 sm:px-8 h-16 w-full ${navClassList.join(
-          " "
-        )}`}
+        className={`main-nav lower-glassmorphism bg-bglight dark:bg-bgdark z-30 top-0 shadow-sm fixed duration-400 px-4 sm:px-8 h-16 w-full ${navClassList}`}
       >
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           <Link

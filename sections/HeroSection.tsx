@@ -6,9 +6,9 @@ import LinkButton from "../components/LinkButton";
 
 const HeroSection: React.FC = () => {
   const sectionRef = useRef(null);
-  const q = gsap.utils.selector(sectionRef);
 
   useEffect(() => {
+    const q = gsap.utils.selector(sectionRef);
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(q(".bg-text"), {
@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
         rotation: "+=1",
         ease: "power1.easeInOut",
       });
-  }, [q]);
+  }, []);
 
   return (
     <section
@@ -54,10 +54,7 @@ const HeroSection: React.FC = () => {
         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-md border border-marrsgreen/30 dark:border-carrigreen/30 bg-white dark:bg-carddark shadow-xl overflow-hidden">
           <div className="absolute inset-0 grid grid-cols-6 grid-rows-6 gap-px opacity-20">
             {Array.from({ length: 36 }).map((_, index) => (
-              <span
-                key={index}
-                className="bg-marrsgreen dark:bg-carrigreen"
-              />
+              <span key={index} className="bg-marrsgreen dark:bg-carrigreen" />
             ))}
           </div>
           <div className="absolute inset-8 rounded-md border border-bgdark/10 dark:border-bglight/10 bg-bglight/80 dark:bg-bgdark/80 p-6 flex flex-col justify-between">

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import type { ReactElement } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -7,7 +8,7 @@ type Props = {
   project: {
     title: string;
     type: string;
-    image: JSX.Element;
+    image: ReactElement;
     desc: string;
     tags: string[];
     liveUrl: string;
@@ -180,7 +181,7 @@ const ProjectCard: React.FC<Props> = ({ index, project }) => {
           {project.tags.map((tag) => (
             <li
               key={tag}
-              className={`project-tags mr-2 my-1 bg-[#E2EFEF] dark:bg-carddark py-1 px-2 rounded`}
+              className={`project-tags mr-2 my-1 bg-blogmist dark:bg-carddark py-1 px-2 rounded`}
             >
               {tag}
             </li>

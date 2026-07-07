@@ -26,7 +26,7 @@ const ProjectSection: React.FC = () => {
       <div className="project-title text-center">
         <RoughNotation
           type="underline"
-          color={`${theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"}`}
+          color={`${theme === "light" ? "#8F79D9" : "#E3C9FA"}`}
           strokeWidth={2}
           order={1}
           show={isOnScreen}
@@ -70,7 +70,7 @@ const projects = [
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     liveUrl: "https://decadez.github.io/decadez.dev/",
     codeUrl: "https://github.com/decadez/decadez.dev",
-    bgColor: "bg-[#E2EFEF] dark:bg-carddark",
+    bgColor: "bg-blogmist dark:bg-carddark",
     githubApi: "https://api.github.com/repos/decadez/decadez.dev",
   },
   {
@@ -86,7 +86,7 @@ const projects = [
     tags: ["Agents", "Evaluation", "Workflow"],
     liveUrl: "https://decadez.github.io/decadez.dev/blog/",
     codeUrl: "https://github.com/decadez/decadez.dev",
-    bgColor: "bg-[#EBF4F4] dark:bg-carddark",
+    bgColor: "bg-blogice dark:bg-carddark",
     githubApi: "https://api.github.com/repos/decadez/decadez.dev",
   },
 ];
