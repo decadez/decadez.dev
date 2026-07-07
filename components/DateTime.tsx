@@ -1,24 +1,15 @@
-import { useEffect, useState } from "react";
-
 const DateTime = ({ datetime }: { datetime: string }) => {
-  const [formattedDate, setFormattedDate] = useState<string | null>(null);
-  const [formattedTime, setFormattedTime] = useState<string | null>(null);
+  const myDatetime = new Date(datetime);
+  const formattedDate = myDatetime.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
-  useEffect(() => {
-    const myDatetime = new Date(datetime);
-    const modifiedDate = myDatetime.toLocaleDateString([], {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-
-    const modifiedTime = myDatetime.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    setFormattedDate(modifiedDate);
-    setFormattedTime(modifiedTime);
-  }, [datetime]);
+  const formattedTime = myDatetime.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   return (
     <div className="relative">

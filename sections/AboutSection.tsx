@@ -68,9 +68,7 @@ const AboutSection: React.FC = () => {
           <div className="text-center">
             <RoughNotation
               type="underline"
-              color={`${
-                theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"
-              }`}
+              color={`${theme === "light" ? "#8F79D9" : "#E3C9FA"}`}
               strokeWidth={2}
               order={1}
               show={isSecOnScreen}
@@ -81,8 +79,8 @@ const AboutSection: React.FC = () => {
 
           <div className="about-intro max-w-3xl mx-auto text-lg leading-8">
             <p className="mb-4">
-              decadez.dev is a personal site for practical notes: code I want
-              to reuse, tools I want to remember, and product ideas that become
+              decadez.dev is a personal site for practical notes: code I want to
+              reuse, tools I want to remember, and product ideas that become
               clearer when written down.
             </p>
             <p>

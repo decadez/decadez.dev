@@ -15,7 +15,9 @@ const LinkButton: React.FC<Props> = ({
 }) => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const resolvedHref =
-    href.startsWith("/") && !href.startsWith("//") ? `${basePath}${href}` : href;
+    href.startsWith("/") && !href.startsWith("//")
+      ? `${basePath}${href}`
+      : href;
 
   return (
     <a

@@ -12,7 +12,12 @@ module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
   images: {
-    domains: ["res.cloudinary.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+    ],
     unoptimized: true,
   },
   compiler: {

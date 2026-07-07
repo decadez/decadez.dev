@@ -12,9 +12,9 @@ const BlogHeroSection: React.FC = () => {
   };
 
   const sectionRef = useRef(null);
-  const q = gsap.utils.selector(sectionRef);
 
   useEffect(() => {
+    const q = gsap.utils.selector(sectionRef);
     gsap.registerPlugin(ScrollTrigger);
 
     // text animation after initial load
@@ -41,8 +41,7 @@ const BlogHeroSection: React.FC = () => {
       <div className="mt-10">
         <div className="overflow-hidden py-1">
           <h1 className="main-header text-4xl lg:text-5xl font-bold">
-            decadez{" "}
-            <span className="text-marrsgreen dark:text-carrigreen">Blog</span>
+            decadez <span className="blog-accent-text">Blog</span>
           </h1>
         </div>
         <div>
@@ -55,7 +54,7 @@ const BlogHeroSection: React.FC = () => {
           </p>
           <p className="intro-3">
             Code and experiments are collected on{" "}
-            <a href="https://github.com/decadez" className="link">
+            <a href="https://github.com/decadez" className="blog-link">
               GitHub.
             </a>
             <svg
@@ -78,10 +77,10 @@ const BlogHeroSection: React.FC = () => {
       </div>
       <label className="relative block my-4">
         <input
-          className="placeholder:italic placeholder:text-opacity-75 py-3 pr-14 pl-5 
-                    block bg-cardlight dark:bg-carddark w-full rounded shadow-md
-                    border border-cardlight dark:border-carddark border-opacity-40 
-                    focus:outline-none focus:border-marrslight focus:dark:border-carrilight"
+          className="placeholder:italic placeholder:text-gray-500 dark:placeholder:text-gray-300 py-3 pr-14 pl-5
+                    block bg-white/80 dark:bg-blogcarddark w-full rounded shadow-md
+                    border border-blogmist dark:border-bloglavender/20
+                    focus:outline-none focus:border-blogviolet focus:dark:border-bloglavender"
           placeholder="Search for anything..."
           type="text"
           name="search"
@@ -96,7 +95,7 @@ const BlogHeroSection: React.FC = () => {
             width="24"
             height="24"
             aria-hidden="true"
-            className="fill-marrsgreen dark:fill-carrigreen"
+            className="blog-accent-fill"
           >
             <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
           </svg>
@@ -124,7 +123,7 @@ const BlogHeroSection: React.FC = () => {
         <select
           name="language"
           id="language"
-          className="px-2 py-1 bg-cardlight dark:bg-carddark focus-visible:outline-marrsgreen dark:focus-visible:outline-carrigreen"
+          className="px-2 py-1 bg-white/80 dark:bg-blogcarddark focus-visible:outline-blogviolet dark:focus-visible:outline-bloglavender"
           defaultValue={postLanguage}
           onChange={(e) => onLanguageChange!(e.target.value as LanguageType)}
         >

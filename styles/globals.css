@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "../tailwind.config.js";
+@import "tailwindcss";
 
 @layer base {
   html {
@@ -53,10 +52,34 @@
     @apply py-8 px-4 sm:px-8 md:px-20 max-w-4xl mx-auto;
   }
   .glassmorphism {
-    @apply bg-clip-padding backdrop-filter backdrop-blur-xl !bg-opacity-50 dark:!bg-opacity-60;
+    @apply bg-clip-padding backdrop-filter backdrop-blur-xl bg-bglight/50 dark:bg-carddark/60;
   }
   .lower-glassmorphism {
-    @apply !bg-opacity-50 dark:!bg-opacity-60 after:!backdrop-blur-xl after:w-full after:h-full after:absolute after:top-0 after:left-0 after:-z-10;
+    @apply bg-bglight/50 dark:bg-bgdark/60 after:!backdrop-blur-xl after:w-full after:h-full after:absolute after:top-0 after:left-0 after:-z-10;
+  }
+  .blog-page {
+    @apply bg-blogice text-blogink dark:bg-blogdark dark:text-blogice;
+  }
+  .blog-selection {
+    @apply selection:bg-blogperiwinkle selection:text-blogink dark:selection:bg-bloglavender dark:selection:text-blogdark;
+  }
+  .blog-link {
+    @apply outline-blogviolet text-blogink hover:text-blogviolet dark:text-bloglavender dark:hover:text-blogmist;
+  }
+  .blog-outline {
+    @apply outline-blogviolet dark:outline-bloglavender;
+  }
+  .blog-accent-text {
+    @apply text-blogviolet dark:text-bloglavender;
+  }
+  .blog-accent-fill {
+    @apply fill-blogviolet dark:fill-bloglavender;
+  }
+  .blog-card {
+    @apply bg-white/80 dark:bg-blogcarddark border border-blogmist/80 dark:border-bloglavender/10;
+  }
+  .blog-muted {
+    @apply text-blogink/70 dark:text-blogice/75;
   }
 }
 
@@ -75,19 +98,58 @@
   @apply dark:bg-gray-200;
 }
 .dark .swiper-pagination-bullet-active {
-  background-color: rgb(5 206 145) !important;
+  background-color: #e3c9fa !important;
 }
 .swiper-pagination-bullet-active {
-  background-color: rgb(0 140 140) !important;
+  background-color: #8f79d9 !important;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  @apply dark:text-carrigreen;
+  @apply text-blogviolet dark:text-bloglavender;
 }
 .swiper-button-prev,
 .swiper-button-next {
-  color: rgb(0 140 140) !important;
+  color: #8f79d9 !important;
+}
+.dark .swiper-button-prev,
+.dark .swiper-button-next {
+  color: #e3c9fa !important;
+}
+.blog-selection .link-outline {
+  @apply outline-blogviolet dark:outline-bloglavender;
+}
+.blog-selection .bg-marrsgreen,
+.blog-selection .hover\:bg-marrsgreen:hover {
+  @apply bg-blogviolet;
+}
+.dark .blog-selection .dark\:bg-carrigreen,
+.dark .blog-selection .dark\:hover\:bg-carrigreen:hover {
+  @apply bg-bloglavender;
+}
+.blog-selection .border-marrsgreen {
+  @apply border-blogviolet;
+}
+.dark .blog-selection .dark\:border-carrigreen {
+  @apply border-bloglavender;
+}
+.blog-selection .text-marrsgreen,
+.blog-selection .hover\:text-marrsgreen:hover {
+  @apply text-blogviolet;
+}
+.dark .blog-selection .dark\:text-carrigreen,
+.dark .blog-selection .dark\:hover\:text-carrigreen:hover {
+  @apply text-bloglavender;
+}
+.blog-selection .fill-marrsgreen,
+.blog-selection .hover\:fill-marrsgreen:hover,
+.blog-selection a:hover svg {
+  @apply fill-blogviolet;
+}
+.dark .blog-selection .dark\:fill-carrigreen,
+.dark .blog-selection .dark\:hover\:fill-carrigreen:hover,
+.dark .blog-selection a:hover svg {
+  @apply fill-bloglavender;
 }
 @media only screen and (max-width: 480px) {
   .swiper-button-prev,
