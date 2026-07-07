@@ -1,0 +1,90 @@
+pages/blog/posts/[slug].tsx
+  s_9b4f42898483e1::t_571736561f84d6 1-175
+pages/blog/categories/index.tsx
+  s_9b4f42898483e1::t_571736561f84d6 1-138
+public/favicons/favicon.svg
+  s_9b4f42898483e1::t_374319784a4576 1-6
+README.md
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-23
+components/Footer.tsx
+  s_9b4f42898483e1::t_2bfd0cf98e8e76 1-67
+next.config.js
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-27
+pages/_document.tsx
+  s_9b4f42898483e1::t_374319784a4576 14-15,20
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-13,16-19,21-39
+contents/working-with-ai-agents.md
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-34
+components/AppHead.tsx
+  s_9b4f42898483e1::t_2bfd0cf98e8e76 1-45,47-79
+  s_9b4f42898483e1::t_74e4d0f2b7be32 46
+pages/blog/tags/[tag].tsx
+  s_9b4f42898483e1::t_571736561f84d6 1-99
+components/blog/BlogHeader.tsx
+  s_9b4f42898483e1::t_2bfd0cf98e8e76 1-162
+pages/404.tsx
+  s_9b4f42898483e1::t_571736561f84d6 1-50
+sections/BlogHeroSection.tsx
+  s_9b4f42898483e1::t_2bfd0cf98e8e76 1-139
+package.json
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-40
+sections/ContactSection.tsx
+  s_9b4f42898483e1::t_fb0d7d1108d6cb 1-59
+contents/static-sites-on-github-pages.md
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-36
+public/favicons/site.webmanifest
+  s_9b4f42898483e1::t_374319784a4576 6-8
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-5,9-14
+pages/blog/categories/[category].tsx
+  s_9b4f42898483e1::t_571736561f84d6 1-103
+sections/BlogSection.tsx
+  s_9b4f42898483e1::t_4373a5307d42dc 1-123
+scripts/generate-sitemap.mjs
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-72
+components/SocialLinks.tsx
+  s_9b4f42898483e1::t_2f9528b103b3bd 28,31
+  s_9b4f42898483e1::t_2bfd0cf98e8e76 1-27,29-30,32-101
+sections/ProjectSection.tsx
+  s_9b4f42898483e1::t_89d128f93c6348 1-94
+sections/AboutSection.tsx
+  s_9b4f42898483e1::t_89d128f93c6348 1-134
+.github/workflows/deploy-pages.yml
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-62
+pages/blog/index.tsx
+  s_9b4f42898483e1::t_571736561f84d6 1-97
+components/Header.tsx
+  s_9b4f42898483e1::t_2bfd0cf98e8e76 1-153
+context/filter.tsx
+  s_9b4f42898483e1::t_2bfd0cf98e8e76 1-44
+pages/blog/tags/index.tsx
+  s_9b4f42898483e1::t_571736561f84d6 1-94
+components/BlogImageCard.tsx
+  s_9b4f42898483e1::t_4373a5307d42dc 1-132
+contents/hello-decadez.md
+  s_9b4f42898483e1::t_6f2c5aa0a553cc 1-38
+sections/HeroSection.tsx
+  s_9b4f42898483e1::t_89d128f93c6348 1-135
+components/ProjectCard.tsx
+  s_9b4f42898483e1::t_2bfd0cf98e8e76 1-194
+public/og-image.svg
+  s_9b4f42898483e1::t_74e4d0f2b7be32 1-10
+pages/index.tsx
+  s_9b4f42898483e1::t_571736561f84d6 1-26,28-78
+  s_9b4f42898483e1::t_74e4d0f2b7be32 27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.28-trip",
+  "base_commit_sha": "9b97cc212ae2416d3a95c05e5330dd49e6035a5e",
+  "prompts": {},
+  "sessions": {
+    "s_9b4f42898483e1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f3c43-2750-7993-9317-9bb0906b6bd1",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
