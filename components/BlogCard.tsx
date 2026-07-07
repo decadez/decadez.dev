@@ -58,13 +58,13 @@ const BlogCard: React.FC<Props> = ({ post }) => {
       <div className="overflow-hidden">
         <Link
           href={`/blog/posts/${slug}`}
-          className="blog-title link inline-block outline-none dark:outline-none focus-within:underline"
+          className="blog-title blog-link inline-block outline-none dark:outline-none focus-within:underline"
         >
           <h3 className="text-lg font-medium">{title}</h3>
         </Link>
       </div>
       <div className="overflow-hidden">
-        <div className="blog-datetime italic text-sm mb-1 text-carddark dark:text-gray-300 flex items-center">
+        <div className="blog-datetime italic text-sm mb-1 blog-muted flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4 mr-2"
@@ -83,7 +83,7 @@ const BlogCard: React.FC<Props> = ({ post }) => {
           <DateTime datetime={datetime} />
         </div>
       </div>
-      <p className="blog-excerpt dark:text-gray-300">{excerpt}</p>
+      <p className="blog-excerpt blog-muted">{excerpt}</p>
     </li>
   );
 };

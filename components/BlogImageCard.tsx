@@ -63,7 +63,7 @@ const BlogImageCard: React.FC<Props> = ({
   return (
     <div
       ref={sectionRef}
-      className={`sm:min-w-[17rem] transition translate-y-2 hover:-translate-y-0 max-w-md bg-gray-100 dark:bg-carddark p-4 rounded shadow-md hover:shadow-xl ${
+      className={`sm:min-w-[17rem] transition translate-y-2 hover:-translate-y-0 max-w-md blog-card p-4 rounded shadow-md hover:shadow-xl ${
         fullWH ? "w-full" : "w-72 my-2"
       } ${className}`}
     >
@@ -71,7 +71,7 @@ const BlogImageCard: React.FC<Props> = ({
         <div className="mb-2 overflow-hidden h-14">
           <Link
             href={`/blog/posts/${slug}`}
-            className="blog-title link inline-block outline-none dark:outline-none focus-within:underline"
+            className="blog-title blog-link inline-block outline-none dark:outline-none focus-within:underline"
           >
             <h3
               className={`${
@@ -92,15 +92,15 @@ const BlogImageCard: React.FC<Props> = ({
               alt={coverImageAlt ?? title}
             />
           ) : (
-            <div className="h-full w-full rounded bg-bglight dark:bg-bgdark border border-marrsgreen/20 dark:border-carrigreen/20 p-4 flex items-end">
-              <span className="text-sm uppercase tracking-widest text-marrsgreen dark:text-carrigreen">
+            <div className="h-full w-full rounded bg-blogice dark:bg-blogdark border border-blogperiwinkle/50 dark:border-bloglavender/20 p-4 flex items-end">
+              <span className="text-sm uppercase tracking-widest blog-accent-text">
                 decadez.dev
               </span>
             </div>
           )}
         </div>
       </div>
-      <div className="italic text-sm mb-1 text-carddark dark:text-gray-300 flex items-center">
+      <div className="italic text-sm mb-1 blog-muted flex items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-4 w-4 mr-2"
@@ -119,7 +119,7 @@ const BlogImageCard: React.FC<Props> = ({
         <DateTime datetime={datetime} />
       </div>
       <p
-        className={`blog-text dark:text-gray-300 ${
+        className={`blog-text blog-muted ${
           fullWH ? "text-base sm:text-sm" : "text-sm w-60"
         } overflow-hidden text-ellipsis line-clamp-4 leading-7 sm:leading-6`}
       >
