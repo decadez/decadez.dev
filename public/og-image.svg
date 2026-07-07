@@ -1,0 +1,10 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F8FBFA"/>
+  <rect x="72" y="72" width="1056" height="486" rx="18" fill="#FFFFFF" stroke="#007A7A" stroke-opacity="0.22"/>
+  <path d="M102 466H1098" stroke="#007A7A" stroke-opacity="0.12"/>
+  <text x="120" y="214" fill="#007A7A" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="8">DECADEZ.DEV</text>
+  <text x="120" y="330" fill="#18242D" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="700">Code, AI, product notes</text>
+  <text x="120" y="410" fill="#465760" font-family="Arial, Helvetica, sans-serif" font-size="34">A lightweight personal lab for reusable systems and ideas.</text>
+  <circle cx="1012" cy="178" r="42" fill="#05CE91" fill-opacity="0.16"/>
+  <circle cx="1048" cy="226" r="18" fill="#007A7A" fill-opacity="0.18"/>
+</svg>
