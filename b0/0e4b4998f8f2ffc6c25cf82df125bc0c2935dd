@@ -1,0 +1,19 @@
+.github/workflows/deploy-pages.yml
+  s_9b4f42898483e1::t_682130af8a8f81 39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.28-trip",
+  "base_commit_sha": "b00e4b4998f8f2ffc6c25cf82df125bc0c2935dd",
+  "prompts": {},
+  "sessions": {
+    "s_9b4f42898483e1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f3c43-2750-7993-9317-9bb0906b6bd1",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
