@@ -1,0 +1,33 @@
+apps/api/src/modules/health/v1/health.controller.ts
+  s_b0d759a8b06c37::t_a3419aca73b557 2,11-13,28-31
+pnpm-workspace.yaml
+  s_b0d759a8b06c37::t_88dc706fc3f9c6 10
+apps/api/src/app.module.ts
+  s_b0d759a8b06c37::t_a3419aca73b557 3-7,12
+packages/nest-infra/src/index.ts
+  s_b0d759a8b06c37::t_a3419aca73b557 7-8
+packages/nest-infra/package.json
+  s_b0d759a8b06c37::t_88dc706fc3f9c6 3,25
+apps/api/package.json
+  s_b0d759a8b06c37::t_88dc706fc3f9c6 12
+packages/nest-infra/src/supabase/supabase.service.ts
+  s_b0d759a8b06c37::t_a3419aca73b557 1-67
+packages/nest-infra/src/supabase/supabase.module.ts
+  s_b0d759a8b06c37::t_a3419aca73b557 1-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.32-trip",
+  "base_commit_sha": "4827824f83f4fb75bdea28c76542198e7bd208da",
+  "prompts": {},
+  "sessions": {
+    "s_b0d759a8b06c37": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f40c8-3d16-76b3-8dfd-c7aae75ee38f",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
