@@ -1,0 +1,22 @@
+AGENTS.md
+  s_b0d759a8b06c37::t_e4efac2ad7d120 1-13
+README.md
+  s_b0d759a8b06c37::t_879393ac031533 14-66
+  s_b0d759a8b06c37::t_bc612d71fd0075 3-4,8-12,67-98,106,111-113,122,127-132
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.32-trip",
+  "base_commit_sha": "ee911b3b3f613708636015e012b4e7796bbae54e",
+  "prompts": {},
+  "sessions": {
+    "s_b0d759a8b06c37": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f40c8-3d16-76b3-8dfd-c7aae75ee38f",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
