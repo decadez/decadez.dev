@@ -1,0 +1,35 @@
+{
+  "name": "@decadez/nest-infra",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "prepublishOnly": "pnpm lint && pnpm build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@vercel/edge-config": "^1.4.3",
+    "dotenv": "^17.4.2"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^11.1.9",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^11.1.9",
+    "@types/node": "^26.1.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "typescript": "^6.0.3"
+  }
+}
