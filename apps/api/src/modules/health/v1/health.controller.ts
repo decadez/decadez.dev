@@ -17,7 +17,7 @@ export class HealthController {
   }
 
   @Get("edge-config")
-  edgeConfig() {
+  edgeConfig(): Record<string, unknown> {
     return this.edgeConfigService.getAll();
   }
 }
