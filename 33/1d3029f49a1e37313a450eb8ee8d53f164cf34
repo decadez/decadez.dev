@@ -1,0 +1,25 @@
+packages/nest-infra/README.md
+  s_b0d759a8b06c37::t_f66692d8338d16 1-24
+.github/workflows/publish-nest-infra.yml
+  s_b0d759a8b06c37::t_f66692d8338d16 1-44
+packages/nest-infra/package.json
+  s_b0d759a8b06c37::t_f66692d8338d16 7-10,13-18
+package.json
+  s_b0d759a8b06c37::t_f66692d8338d16 12-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.32-trip",
+  "base_commit_sha": "331d3029f49a1e37313a450eb8ee8d53f164cf34",
+  "prompts": {},
+  "sessions": {
+    "s_b0d759a8b06c37": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f40c8-3d16-76b3-8dfd-c7aae75ee38f",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
