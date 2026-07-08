@@ -12,14 +12,15 @@ import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const cursorRef = useRef(null);
+  const cursorSize = 48;
 
   useEffect(() => {
     document.addEventListener("mousemove", (e) => {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
       gsap.to(cursorRef.current, {
-        x: mouseX,
-        y: mouseY,
+        x: mouseX - cursorSize / 2,
+        y: mouseY - cursorSize / 2,
         opacity: 1,
         delay: 0,
       });
@@ -60,7 +61,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <div
         ref={cursorRef}
-        className="hidden lg:block w-12 h-12 opacity-0 pointer-events-none rounded-full border-2 border-marrsgreen dark:border-carrigreen z-[9999] fixed -translate-x-1/2 -translate-y-1/2"
+        className="hidden lg:block w-12 h-12 opacity-0 pointer-events-none rounded-full border-2 border-marrsgreen dark:border-carrigreen z-[9999] fixed"
       />
       <ThemeProvider attribute="class">
         <ProvideFilter>
