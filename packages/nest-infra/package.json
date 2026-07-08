@@ -13,6 +13,10 @@
     "lint": "tsc --noEmit -p tsconfig.json",
     "prepublishOnly": "pnpm lint && pnpm build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/decadez/decadez.dev.git"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
