@@ -55,7 +55,7 @@ jobs:
           GITHUB_PAGES: "true"
           NEXT_PUBLIC_URL: https://decadez.github.io/decadez.dev
           NEXT_PUBLIC_BASE_PATH: /decadez.dev
-          NEXT_PUBLIC_EMAIL: ""
+          NEXT_PUBLIC_EMAIL: "decadez@yeah.net"
 
       - name: Add Pages marker
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
