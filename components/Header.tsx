@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import gsap from "gsap";
@@ -47,11 +47,14 @@ const navLinks = [
 ];
 
 const Header: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
   const { currentSection } = useSection();
   const scroll = useScrollListener();
   const navClassList =
     scroll.y > 150 && scroll.y - scroll.lastY > 0 ? "!shadow-md" : "";
+  const [isDark, setIsDark] = useState(false);
+  const navBgClass = isDark ? "bg-bgdark" : "bg-bglight";
+  const mobileNavBgClass = isDark ? "bg-carddark" : "bg-bglight";
 
   const mainRef = useRef(null);
   const themeBtnRef = useRef<HTMLButtonElement>(null);
@@ -64,19 +67,35 @@ const Header: React.FC = () => {
     );
   }, []);
 
+  useEffect(() => {
+    const syncTheme = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+
+    syncTheme();
+
+    const observer = new MutationObserver(syncTheme);
+    observer.observe(document.documentElement, {
+      attributeFilter: ["class"],
+      attributes: true,
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   // update theme button aria-label according to theme value
   useEffect(() => {
     const themeBtn = themeBtnRef.current;
     if (themeBtn) {
-      themeBtn.ariaLabel = theme ?? "light";
+      themeBtn.ariaLabel = isDark ? "dark" : "light";
     }
-  }, [theme]);
+  }, [isDark]);
 
   return (
     <header className="md:flex">
       <div
         ref={mainRef}
-        className={`main-nav lower-glassmorphism bg-bglight dark:bg-bgdark z-30 top-0 shadow-sm fixed duration-400 px-4 sm:px-8 h-16 w-full ${navClassList}`}
+        className={`main-nav lower-glassmorphism ${navBgClass} z-30 top-0 shadow-sm fixed duration-400 px-4 sm:px-8 h-16 w-full ${navClassList}`}
       >
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           <Link
@@ -87,7 +106,9 @@ const Header: React.FC = () => {
             <span className="text-marrsgreen dark:text-carrigreen">.dev</span>
           </Link>
           <nav className="flex items-center">
-            <div className="glassmorphism md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform -translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-textlight w-11/12 rounded drop-shadow-lg md:drop-shadow-none">
+            <div
+              className={`glassmorphism md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform -translate-x-1/2 md:transform-none ${mobileNavBgClass} dark:text-textlight w-11/12 rounded drop-shadow-lg md:drop-shadow-none`}
+            >
               <ul className="flex justify-evenly items-center py-1">
                 {navLinks.map((navLink) => (
                   <li key={navLink.url}>
@@ -107,7 +128,11 @@ const Header: React.FC = () => {
             </div>
             <button
               type="button"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => {
+                const nextIsDark = !isDark;
+                setIsDark(nextIsDark);
+                setTheme(nextIsDark ? "dark" : "light");
+              }}
               title="Toggles light & dark theme"
               ref={themeBtnRef}
               // aria-label={theme === "dark" ? "dark" : "light"}
