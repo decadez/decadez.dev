@@ -1,0 +1,24 @@
+{
+  "name": "@decadez/api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter @decadez/nest-infra build && tsc -p tsconfig.build.json",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/main.js",
+    "start:dev": "pnpm --filter @decadez/nest-infra build && tsx watch src/main.ts"
+  },
+  "dependencies": {
+    "@decadez/nest-infra": "workspace:*",
+    "@nestjs/common": "^11.1.9",
+    "@nestjs/core": "^11.1.9",
+    "@nestjs/platform-express": "^11.1.9",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}

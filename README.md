@@ -1,5 +1,19 @@
 # decadez.dev
 
+pnpm monorepo for the Decadez web app and API.
+
+## Apps
+
+- `apps/web` - Next.js static site
+- `apps/api` - NestJS API
+
+## Scripts
+
+- `pnpm dev:web` - start the web app
+- `pnpm dev:api` - start the API
+- `pnpm lint` - type-check/lint all workspaces
+- `pnpm build` - build all workspaces
+
 A lightweight personal blog and portfolio built with Next.js, TypeScript, and
 Tailwind CSS.
 

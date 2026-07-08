@@ -1,20 +1,6 @@
-# Ignore everything
-/*
-
-# Except these files & folders
-!/components
-!/contents
-!/context
-!/hooks
-!/pages
-!/sections
-!/styles
-!/utils
-!/.github
-!tsconfig.json
-!tailwind.config.js 
-!postcss.config.js 
-!next.config.js 
-!package.json
-!.prettierrc
-!.eslintrc.json
+node_modules
+.next
+out
+dist
+coverage
+pnpm-lock.yaml

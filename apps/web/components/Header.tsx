@@ -76,7 +76,7 @@ const Header: React.FC = () => {
     <header className="md:flex">
       <div
         ref={mainRef}
-        className={`main-nav lower-glassmorphism bg-bglight dark:bg-bgdark z-30 top-0 shadow-sm fixed duration-400 px-4 sm:px-8 h-16 w-full ${navClassList}`}
+        className={`main-nav lower-glassmorphism bg-bglight dark:bg-bgdark z-30 top-0 shadow-sm fixed px-4 sm:px-8 h-16 w-full ${navClassList}`}
       >
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           <Link
