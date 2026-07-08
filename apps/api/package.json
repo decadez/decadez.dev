@@ -9,7 +9,7 @@
     "start:dev": "pnpm --filter @decadez/nest-infra build && tsx watch src/main.ts"
   },
   "dependencies": {
-    "@decadez/nest-infra": "0.1.0",
+    "@decadez/nest-infra": "workspace:*",
     "@nestjs/common": "^11.1.9",
     "@nestjs/core": "^11.1.9",
     "@nestjs/platform-express": "^11.1.9",

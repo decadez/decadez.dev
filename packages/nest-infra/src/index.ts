@@ -4,4 +4,6 @@ export * from "./env";
 export * from "./modules/module-loader";
 export * from "./response/response";
 export * from "./response/response.interceptor";
+export * from "./supabase/supabase.module";
+export * from "./supabase/supabase.service";
 export * from "./utils/is";
