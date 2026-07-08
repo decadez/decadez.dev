@@ -1,0 +1,20 @@
+components/Header.tsx
+  s_9edaff85fd2b9b::t_e0d62c81d47e21 56-57,98,109-111
+  s_9edaff85fd2b9b::t_a9737e682b1465 1,50,55,70-85,90,92,131-135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.28-trip",
+  "base_commit_sha": "a563449f09400939ce5c8746d015deb9b6bb8f75",
+  "prompts": {},
+  "sessions": {
+    "s_9edaff85fd2b9b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f3f98-1257-74c0-89f8-9ccd0b45bbf7",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
