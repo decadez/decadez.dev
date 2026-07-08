@@ -1,7 +1,8 @@
+import { join } from "node:path";
 import { Module } from "@nestjs/common";
-import { AppController } from "./app.controller";
+import { EdgeConfigModule, loadFeatureModules } from "@decadez/nest-infra";
 
 @Module({
-  controllers: [AppController],
+  imports: [EdgeConfigModule, ...loadFeatureModules(join(__dirname, "modules"))],
 })
 export class AppModule {}
