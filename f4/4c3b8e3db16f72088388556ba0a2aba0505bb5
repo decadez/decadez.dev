@@ -1,0 +1,19 @@
+apps/api/src/modules/health/v1/health.controller.ts
+  s_b0d759a8b06c37::t_c9504596c0e500 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.32-trip",
+  "base_commit_sha": "f44c3b8e3db16f72088388556ba0a2aba0505bb5",
+  "prompts": {},
+  "sessions": {
+    "s_b0d759a8b06c37": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f40c8-3d16-76b3-8dfd-c7aae75ee38f",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
