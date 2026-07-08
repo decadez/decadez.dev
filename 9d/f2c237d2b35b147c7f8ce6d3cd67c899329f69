@@ -1,0 +1,19 @@
+apps/api/package.json
+  s_b0d759a8b06c37::t_909e016f0a9246 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.32-trip",
+  "base_commit_sha": "9df2c237d2b35b147c7f8ce6d3cd67c899329f69",
+  "prompts": {},
+  "sessions": {
+    "s_b0d759a8b06c37": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f40c8-3d16-76b3-8dfd-c7aae75ee38f",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
