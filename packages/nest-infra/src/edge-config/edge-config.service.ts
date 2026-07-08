@@ -1,5 +1,9 @@
 import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
-import { createClient, type EdgeConfigClient, type EdgeConfigItems } from "@vercel/edge-config";
+import {
+  createClient,
+  type EdgeConfigClient,
+  type EdgeConfigItems,
+} from "@vercel/edge-config";
 
 @Injectable()
 export class EdgeConfigService implements OnModuleInit {
@@ -20,7 +24,9 @@ export class EdgeConfigService implements OnModuleInit {
     }
 
     this.items = await this.client.getAll();
-    this.logger.log(`Loaded ${Object.keys(this.items).length} Edge Config item(s).`);
+    this.logger.log(
+      `Loaded ${Object.keys(this.items).length} Edge Config item(s).`
+    );
   }
 
   getAll<T extends EdgeConfigItems = EdgeConfigItems>() {

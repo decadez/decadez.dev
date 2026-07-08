@@ -15,5 +15,7 @@ export function loadEnvFiles(options: LoadEnvFilesOptions = {}) {
   return files
     .map((file) => join(cwd, file))
     .filter((envPath) => existsSync(envPath))
-    .map((envPath) => config({ path: envPath, override: options.override ?? false }));
+    .map((envPath) =>
+      config({ path: envPath, override: options.override ?? false })
+    );
 }
