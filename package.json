@@ -9,7 +9,8 @@
     "build": "pnpm --filter @decadez/api build",
     "lint": "pnpm -r lint",
     "format:check": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "publish:nest-infra": "pnpm --filter @decadez/nest-infra publish --access public"
   },
   "devDependencies": {
     "prettier": "^3.9.4"
