@@ -7,3 +7,4 @@ allowBuilds:
   unrs-resolver: true
 minimumReleaseAgeExclude:
   - "@decadez/nest-infra@0.1.0"
+  - "@decadez/nest-infra@0.2.0"

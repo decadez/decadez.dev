@@ -1,5 +1,5 @@
 import { Controller, Get, Inject } from "@nestjs/common";
-import { EdgeConfigService } from "@decadez/nest-infra";
+import { EdgeConfigService, SupabaseService } from "@decadez/nest-infra";
 
 @Controller({
   path: "health",
@@ -8,7 +8,9 @@ import { EdgeConfigService } from "@decadez/nest-infra";
 export class HealthController {
   constructor(
     @Inject(EdgeConfigService)
-    private readonly edgeConfigService: EdgeConfigService
+    private readonly edgeConfigService: EdgeConfigService,
+    @Inject(SupabaseService)
+    private readonly supabaseService: SupabaseService
   ) {}
 
   @Get()
@@ -22,5 +24,10 @@ export class HealthController {
   @Get("edge-config")
   edgeConfig(): Record<string, unknown> {
     return this.edgeConfigService.getAll();
+  }
+
+  @Get("supabase")
+  supabase() {
+    return this.supabaseService.checkConnection();
   }
 }
