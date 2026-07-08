@@ -1,0 +1,19 @@
+pages/_app.tsx
+  s_4a4e28a0afc5ef::t_1e0ae1d2c15cf1 15,22-23,64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.28-trip",
+  "base_commit_sha": "f0c9fa05027e780945a34b6a0e4ac6fa45bca568",
+  "prompts": {},
+  "sessions": {
+    "s_4a4e28a0afc5ef": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f3fbf-b482-7f10-b279-7d0893e2c5fb",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
