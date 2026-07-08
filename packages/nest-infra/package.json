@@ -1,6 +1,6 @@
 {
   "name": "@decadez/nest-infra",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "commonjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,8 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.110.0",
     "@vercel/edge-config": "^1.4.3",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "ioredis": "^5.11.1"
   },
   "peerDependencies": {
     "@nestjs/common": "^11.1.9",
