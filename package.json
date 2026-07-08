@@ -6,7 +6,7 @@
   "scripts": {
     "dev:web": "pnpm --filter @decadez/web dev",
     "dev:api": "pnpm --filter @decadez/api start:dev",
-    "build": "pnpm -r build",
+    "build": "pnpm --filter @decadez/api build",
     "lint": "pnpm -r lint",
     "format:check": "prettier --check .",
     "format": "prettier --write ."
