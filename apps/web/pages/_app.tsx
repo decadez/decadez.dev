@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { ProvideFilter } from "context/filter";
 import { ProvideSection } from "context/section";
+import { Analytics } from "@vercel/analytics/next";
 
 import "../styles/globals.css";
 
@@ -70,6 +71,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </ProvideSection>
         </ProvideFilter>
       </ThemeProvider>
+      <Analytics />
     </>
   );
 }
