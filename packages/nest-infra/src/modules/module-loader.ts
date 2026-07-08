@@ -17,7 +17,9 @@ function collectModuleFiles(dir: string): string[] {
       return collectModuleFiles(fullPath);
     }
 
-    return moduleFilePattern.test(entry) && !entry.endsWith(".d.ts") ? [fullPath] : [];
+    return moduleFilePattern.test(entry) && !entry.endsWith(".d.ts")
+      ? [fullPath]
+      : [];
   });
 }
 

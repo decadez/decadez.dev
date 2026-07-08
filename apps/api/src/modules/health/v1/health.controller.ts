@@ -6,7 +6,10 @@ import { EdgeConfigService } from "@decadez/nest-infra";
   version: "1",
 })
 export class HealthController {
-  constructor(@Inject(EdgeConfigService) private readonly edgeConfigService: EdgeConfigService) {}
+  constructor(
+    @Inject(EdgeConfigService)
+    private readonly edgeConfigService: EdgeConfigService
+  ) {}
 
   @Get()
   health() {
