@@ -1,0 +1,25 @@
+apps/web/components/Header.tsx
+  s_0b12f059e77bdd::t_29c8586aa6a18a 8,146
+apps/web/utils/apiClient.ts
+  s_0b12f059e77bdd::t_29c8586aa6a18a 1-47
+apps/web/components/ApiStatus.tsx
+  s_0b12f059e77bdd::t_29c8586aa6a18a 1-48,50-56
+apps/api/src/main.ts
+  s_0b12f059e77bdd::t_29c8586aa6a18a 12-14,20-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.33-trip",
+  "base_commit_sha": "685c9d4f7e94fd4b879481dfeae144cf98180868",
+  "prompts": {},
+  "sessions": {
+    "s_0b12f059e77bdd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f4642-2919-7c52-af6b-3140cb565ca3",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
