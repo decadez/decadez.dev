@@ -1,0 +1,26 @@
+apps/web/public/assets/sprites/decade-rider-kick/decade-rider-kick.css
+  s_0b12f059e77bdd::t_0901366439dfeb 4
+apps/web/sections/HeroSection.tsx
+  s_0b12f059e77bdd::t_0901366439dfeb 10,64
+apps/web/public/assets/sprites/decade-rider-kick/decade-rider-kick.json
+  s_0b12f059e77bdd::t_0901366439dfeb 2
+apps/web/components/Header.tsx
+  s_0b12f059e77bdd::t_f96f8a8dced33a 88-92
+  s_0b12f059e77bdd::t_0901366439dfeb 53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.33-trip",
+  "base_commit_sha": "7a0bb12a1dbdf5bca68afc37fe4af859720f450c",
+  "prompts": {},
+  "sessions": {
+    "s_0b12f059e77bdd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f4642-2919-7c52-af6b-3140cb565ca3",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
