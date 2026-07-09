@@ -50,6 +50,7 @@ const Header: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const { currentSection } = useSection();
   const scroll = useScrollListener();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const navClassList =
     scroll.y > 150 && scroll.y - scroll.lastY > 0 ? "!shadow-md" : "";
 
@@ -84,7 +85,11 @@ const Header: React.FC = () => {
             className="flex items-center gap-2 text-xl sm:text-2xl md:hover:text-marrsgreen dark:md:hover:text-carrigreen focus-visible:outline-marrsgreen dark:focus-visible:outline-carrigreen"
           >
             <span className="decade-rider-kick-nav" aria-hidden="true">
-              <span />
+              <span
+                style={{
+                  backgroundImage: `url("${basePath}/assets/sprites/decade-rider-kick/decade-rider-kick-spaced.png")`,
+                }}
+              />
             </span>
             <span>
               decadez
