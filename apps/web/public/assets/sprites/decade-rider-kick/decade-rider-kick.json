@@ -1,0 +1,10 @@
+{
+  "image": "/assets/sprites/decade-rider-kick/decade-rider-kick-spaced.png",
+  "frames": 8,
+  "frameWidth": 160,
+  "frameHeight": 290,
+  "durationMs": 1500,
+  "direction": "horizontal",
+  "background": "transparent",
+  "motion": "translate from A to B, pause on the front-facing first frame, then snap back to A"
+}

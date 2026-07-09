@@ -14,6 +14,27 @@ const Document = () => {
           type="image/svg+xml"
           href={`${basePath}/favicons/favicon.svg`}
         />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={`${basePath}/favicons/favicon-32.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href={`${basePath}/favicons/favicon-192.png`}
+        />
+        <link
+          rel="shortcut icon"
+          href={`${basePath}/favicons/favicon-32.png`}
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={`${basePath}/favicons/apple-touch-icon.png`}
+        />
         <link rel="manifest" href={`${basePath}/favicons/site.webmanifest`} />
         <link
           rel="mask-icon"
