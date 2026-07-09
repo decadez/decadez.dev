@@ -4,8 +4,6 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { ProvideFilter } from "context/filter";
 import { ProvideSection } from "context/section";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "../styles/globals.css";
 
@@ -15,6 +13,8 @@ import Script from "next/script";
 function MyApp({ Component, pageProps }: AppProps) {
   const cursorRef = useRef(null);
   const cursorSize = 48;
+  const googleAnalyticsId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
+  const enableGoogleAnalytics = Boolean(googleAnalyticsId);
 
   useEffect(() => {
     document.addEventListener("mousemove", (e) => {
@@ -42,22 +42,26 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
-      <Script
-        id="google-analytics"
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
+      {enableGoogleAnalytics && (
+        <>
+          <Script
+            id="google-analytics"
+            strategy="lazyOnload"
+            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          />
 
-      <Script id="google-analytics-script" strategy="lazyOnload">
-        {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-        page_path: window.location.pathname,
-        });
-    `}
-      </Script>
+          <Script id="google-analytics-script" strategy="lazyOnload">
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleAnalyticsId}', {
+              page_path: window.location.pathname,
+            });
+          `}
+          </Script>
+        </>
+      )}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -72,8 +76,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           </ProvideSection>
         </ProvideFilter>
       </ThemeProvider>
-      <Analytics />
-      <SpeedInsights />
     </>
   );
 }
