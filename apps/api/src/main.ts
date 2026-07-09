@@ -9,10 +9,18 @@ async function bootstrap() {
 
   const app = await NestFactory.create(AppModule);
   const port = Number(process.env.PORT) || 3001;
+  const corsOrigins = process.env.CORS_ORIGIN?.split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean);
 
   app.enableVersioning({
     type: VersioningType.URI,
     defaultVersion: "1",
+  });
+  app.enableCors({
+    origin: corsOrigins?.length
+      ? corsOrigins
+      : ["http://localhost:3000", "https://decadez.github.io"],
   });
   app.useGlobalInterceptors(new ResponseInterceptor());
 
