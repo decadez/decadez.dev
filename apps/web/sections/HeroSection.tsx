@@ -7,6 +7,7 @@ import LinkButton from "../components/LinkButton";
 
 const HeroSection: React.FC = () => {
   const sectionRef = useRef(null);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   useEffect(() => {
     const q = gsap.utils.selector(sectionRef);
@@ -60,7 +61,7 @@ const HeroSection: React.FC = () => {
             ))}
           </div>
           <Image
-            src="/assets/hero/decade-site-hero.png"
+            src={`${basePath}/assets/hero/decade-site-hero.png`}
             alt="Pixel art Decade-inspired rider mascot with a 10z card"
             width={809}
             height={1004}
