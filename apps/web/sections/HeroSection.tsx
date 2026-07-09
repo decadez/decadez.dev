@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -52,23 +53,20 @@ const HeroSection: React.FC = () => {
 
       <div className="orbital-card z-10 select-none mt-8 sm:mt-14 lg:mt-0 mx-auto lg:basis-1/3">
         <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-md border border-marrsgreen/30 dark:border-carrigreen/30 bg-white dark:bg-carddark shadow-xl overflow-hidden">
+          <div className="absolute inset-0 bg-blogmist/70 dark:bg-bgdark" />
           <div className="absolute inset-0 grid grid-cols-6 grid-rows-6 gap-px opacity-20">
             {Array.from({ length: 36 }).map((_, index) => (
               <span key={index} className="bg-marrsgreen dark:bg-carrigreen" />
             ))}
           </div>
-          <div className="absolute inset-8 rounded-md border border-bgdark/10 dark:border-bglight/10 bg-bglight/80 dark:bg-bgdark/80 p-6 flex flex-col justify-between">
-            <div>
-              <div className="text-sm uppercase tracking-widest text-marrsgreen dark:text-carrigreen">
-                decadez.dev
-              </div>
-              <div className="mt-6 text-5xl font-semibold">10z</div>
-            </div>
-            <div className="text-sm leading-6">
-              Notes on code, product, AI tooling, and the small systems that
-              make work feel lighter.
-            </div>
-          </div>
+          <Image
+            src="/assets/hero/decade-site-hero.png"
+            alt="Pixel art Decade-inspired rider mascot with a 10z card"
+            width={809}
+            height={1004}
+            className="absolute inset-0 m-auto h-[92%] w-[92%] object-contain [image-rendering:pixelated]"
+            priority
+          />
         </div>
       </div>
 

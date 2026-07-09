@@ -81,10 +81,15 @@ const Header: React.FC = () => {
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           <Link
             href="/"
-            className="text-xl sm:text-2xl md:hover:text-marrsgreen dark:md:hover:text-carrigreen focus-visible:outline-marrsgreen dark:focus-visible:outline-carrigreen"
+            className="flex items-center gap-2 text-xl sm:text-2xl md:hover:text-marrsgreen dark:md:hover:text-carrigreen focus-visible:outline-marrsgreen dark:focus-visible:outline-carrigreen"
           >
-            decadez
-            <span className="text-marrsgreen dark:text-carrigreen">.dev</span>
+            <span className="decade-rider-kick-nav" aria-hidden="true">
+              <span />
+            </span>
+            <span>
+              decadez
+              <span className="text-marrsgreen dark:text-carrigreen">.dev</span>
+            </span>
           </Link>
           <nav className="flex items-center">
             <div className="glassmorphism md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform -translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-textlight w-11/12 rounded drop-shadow-lg md:drop-shadow-none">

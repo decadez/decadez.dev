@@ -1,0 +1,19 @@
+.decade-rider-kick {
+  width: 160px;
+  height: 290px;
+  background-image: url("/assets/sprites/decade-rider-kick/decade-rider-kick-spaced.png");
+  background-repeat: no-repeat;
+  background-size: 1280px 290px;
+  image-rendering: pixelated;
+  animation: decade-rider-kick 1500ms steps(8) infinite;
+}
+
+@keyframes decade-rider-kick {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -1280px 0;
+  }
+}
