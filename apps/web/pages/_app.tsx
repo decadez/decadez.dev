@@ -8,13 +8,10 @@ import { ProvideSection } from "context/section";
 import "../styles/globals.css";
 
 import gsap from "gsap";
-import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const cursorRef = useRef(null);
   const cursorSize = 48;
-  const googleAnalyticsId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
-  const enableGoogleAnalytics = Boolean(googleAnalyticsId);
 
   useEffect(() => {
     document.addEventListener("mousemove", (e) => {
@@ -42,26 +39,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
-      {enableGoogleAnalytics && (
-        <>
-          <Script
-            id="google-analytics"
-            strategy="lazyOnload"
-            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
-          />
-
-          <Script id="google-analytics-script" strategy="lazyOnload">
-            {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${googleAnalyticsId}', {
-              page_path: window.location.pathname,
-            });
-          `}
-          </Script>
-        </>
-      )}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
