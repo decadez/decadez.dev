@@ -1,7 +1,7 @@
 .decade-rider-kick {
   width: 160px;
   height: 290px;
-  background-image: url("/assets/sprites/decade-rider-kick/decade-rider-kick-spaced.png");
+  background-image: url("decade-rider-kick-spaced.png");
   background-repeat: no-repeat;
   background-size: 1280px 290px;
   image-rendering: pixelated;
