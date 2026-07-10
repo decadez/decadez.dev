@@ -5,12 +5,16 @@
   "packageManager": "pnpm@11.7.0",
   "scripts": {
     "dev:web": "pnpm --filter @decadez/web dev",
+    "dev:docs": "pnpm --filter @decadez/docs dev",
     "dev:api": "pnpm --filter @decadez/api start:dev",
     "build": "pnpm --filter @decadez/api build",
+    "build:web": "pnpm --filter @decadez/web build",
+    "build:docs": "pnpm --filter @decadez/docs build",
     "lint": "pnpm -r lint",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "publish:nest-infra": "pnpm --filter @decadez/nest-infra publish --access public"
+    "publish:nest-infra": "pnpm --filter @decadez/nest-infra publish --access public",
+    "publish:web-dev-ui": "pnpm --filter @decadez/web-dev-ui publish --access public"
   },
   "devDependencies": {
     "prettier": "^3.9.4"

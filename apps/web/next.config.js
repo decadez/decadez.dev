@@ -11,6 +11,7 @@ module.exports = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx", "html"],
   reactStrictMode: true,
   trailingSlash: true,
+  transpilePackages: ["@decadez/web-dev-ui"],
   images: {
     remotePatterns: [
       {

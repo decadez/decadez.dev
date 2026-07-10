@@ -1,6 +1,8 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
 
+@source "../../../packages/web-dev-ui/src/**/*.{ts,tsx}";
+
 @layer base {
   html {
     @apply scroll-smooth overflow-y-scroll;
@@ -78,94 +80,8 @@
   .blog-card {
     @apply bg-white/80 dark:bg-blogcarddark border border-blogmist/80 dark:border-bloglavender/10;
   }
-  .decade-rider-kick-nav {
-    position: relative;
-    width: 112px;
-    height: 56px;
-    margin-top: -8px;
-    margin-bottom: -8px;
-    flex: 0 0 auto;
-    overflow: hidden;
-  }
-  .decade-rider-kick-nav > span {
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 34px;
-    height: 62px;
-    background-repeat: no-repeat;
-    background-size: 272px 62px;
-    image-rendering: pixelated;
-    animation:
-      decade-rider-kick-nav-frames 1500ms infinite,
-      decade-rider-kick-nav-path 1500ms infinite;
-  }
   .blog-muted {
     @apply text-blogink/70 dark:text-blogice/75;
-  }
-}
-
-@keyframes decade-rider-kick-nav-frames {
-  0%,
-  18% {
-    background-position: 0 0;
-  }
-
-  18.01%,
-  30% {
-    background-position: -34px 0;
-  }
-
-  30.01%,
-  42% {
-    background-position: -68px 0;
-  }
-
-  42.01%,
-  54% {
-    background-position: -102px 0;
-  }
-
-  54.01%,
-  66% {
-    background-position: -136px 0;
-  }
-
-  66.01%,
-  78% {
-    background-position: -170px 0;
-  }
-
-  78.01%,
-  90% {
-    background-position: -204px 0;
-  }
-
-  90.01%,
-  96% {
-    background-position: -238px 0;
-  }
-
-  96.01%,
-  100% {
-    background-position: 0 0;
-  }
-}
-
-@keyframes decade-rider-kick-nav-path {
-  0%,
-  18% {
-    transform: translateX(0);
-  }
-
-  90%,
-  96% {
-    transform: translateX(76px);
-  }
-
-  96.01%,
-  100% {
-    transform: translateX(0);
   }
 }
 

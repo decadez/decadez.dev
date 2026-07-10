@@ -43,6 +43,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build UI package
+        run: pnpm --filter @decadez/web-dev-ui build
+
       - name: Lint
         run: pnpm lint
 
@@ -57,6 +60,16 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /decadez.dev
           NEXT_PUBLIC_EMAIL: "decadez@yeah.net"
           NEXT_PUBLIC_API_BASE_URL: "https://decadez-dev.vercel.app"
+
+      - name: Build UI docs
+        run: pnpm --filter @decadez/docs build
+        env:
+          STORYBOOK_BASE_PATH: /decadez.dev/ui/
+
+      - name: Attach UI docs
+        run: |
+          mkdir -p apps/web/out/ui
+          cp -R apps/docs/storybook-static/. apps/web/out/ui/
 
       - name: Add Pages marker
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

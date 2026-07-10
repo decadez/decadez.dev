@@ -12,6 +12,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@decadez/web-dev-ui": "workspace:*",
     "gray-matter": "^4.0.3",
     "gsap": "^3.15.0",
     "next": "^16.2.10",
