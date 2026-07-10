@@ -1,0 +1,75 @@
+packages/web-dev-ui/tsconfig.build.json
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1-10
+packages/web-dev-ui/package.json
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1,3-6,18-19,30-40
+  s_0b12f059e77bdd::t_cc724791704ba3 7-8,11-13
+  s_0b12f059e77bdd::t_0cf641515326ac 2,9-10,14-17,20-29
+apps/docs/src/stories/rider-kick-logo.stories.tsx
+  s_0b12f059e77bdd::t_585ee8dfdff5b1 1-25
+.gitignore
+  s_0b12f059e77bdd::t_2a073eb0383358 15-16,21-22
+apps/web/components/Header.tsx
+  s_0b12f059e77bdd::t_bf5f45ecb9edab 1,8,55,59,70-71,74-86,88-109
+.github/workflows/deploy-pages.yml
+  s_0b12f059e77bdd::t_0cf641515326ac 46-48
+  s_0b12f059e77bdd::t_e48c2d2fc38cc0 64-73
+apps/docs/package.json
+  s_0b12f059e77bdd::t_90f38606373c4e 18
+  s_0b12f059e77bdd::t_585ee8dfdff5b1 1-17,19-27
+package.json
+  s_0b12f059e77bdd::t_e48c2d2fc38cc0 8,11-12
+  s_0b12f059e77bdd::t_0cf641515326ac 16-17
+.github/workflows/publish-web-dev-ui.yml
+  s_0b12f059e77bdd::t_0cf641515326ac 1-44
+packages/web-dev-ui/src/index.ts
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1-4
+packages/web-dev-ui/tsconfig.json
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1-16
+packages/web-dev-ui/src/rider-kick-logo.tsx
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1-7,9-19
+packages/web-dev-ui/src/site-header.tsx
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1-118
+packages/web-dev-ui/src/styles.css
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1-87
+apps/docs/.storybook/main.ts
+  s_0b12f059e77bdd::t_585ee8dfdff5b1 1,3-10,16-18
+  s_0b12f059e77bdd::t_90f38606373c4e 2,13
+  s_0b12f059e77bdd::t_92b3f0425c07b3 11-12,14-15
+apps/web/components/LinkButton.tsx
+  s_0b12f059e77bdd::t_efd69e2da88689 1-2,6,8
+apps/docs/src/preview.css
+  s_0b12f059e77bdd::t_b31977c3d58928 4-5
+  s_0b12f059e77bdd::t_585ee8dfdff5b1 1-3,6-52
+apps/web/tsconfig.json
+  s_0b12f059e77bdd::t_97582db9a26a86 24
+apps/docs/src/stories/site-header.stories.tsx
+  s_0b12f059e77bdd::t_585ee8dfdff5b1 1-25,27-43
+  s_0b12f059e77bdd::t_6cf1edd22e6436 26
+packages/web-dev-ui/src/status-indicator.tsx
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1,3-8,10-15,17,21-23,30,33
+apps/docs/src/stories/link-button.stories.tsx
+  s_0b12f059e77bdd::t_6cf1edd22e6436 13
+  s_0b12f059e77bdd::t_585ee8dfdff5b1 1-12,14-31
+packages/web-dev-ui/src/link-button.tsx
+  s_0b12f059e77bdd::t_2cd217dfd8f866 1-41
+apps/web/styles/globals.css
+  s_0b12f059e77bdd::t_b31977c3d58928 4-5
+apps/docs/tsconfig.json
+  s_0b12f059e77bdd::t_585ee8dfdff5b1 1-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.33-trip",
+  "base_commit_sha": "2750429c080e5126d50747d6effd3bd3437d6dbd",
+  "prompts": {},
+  "sessions": {
+    "s_0b12f059e77bdd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f4642-2919-7c52-af6b-3140cb565ca3",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
