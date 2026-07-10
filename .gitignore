@@ -12,10 +12,14 @@ node_modules
 # next.js
 .next/
 out/
+**/.next/
+**/out/
 
 # production
 build
 dist
+storybook-static/
+**/storybook-static/
 
 # misc
 .DS_Store
