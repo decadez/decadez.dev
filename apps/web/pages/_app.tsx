@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { ProvideFilter } from "context/filter";
 import { ProvideSection } from "context/section";
 
+import "@decadez/web-dev-ui/styles.css";
 import "../styles/globals.css";
 
 import gsap from "gsap";

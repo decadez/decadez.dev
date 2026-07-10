@@ -1,0 +1,44 @@
+name: Publish Web Dev UI
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "web-dev-ui-v*"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint package
+        run: pnpm --filter @decadez/web-dev-ui lint
+
+      - name: Build package
+        run: pnpm --filter @decadez/web-dev-ui build
+
+      - name: Publish package
+        run: pnpm --filter @decadez/web-dev-ui publish --access public --no-git-checks --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
