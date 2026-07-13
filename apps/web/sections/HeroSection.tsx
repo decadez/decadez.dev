@@ -60,6 +60,14 @@ const HeroSection: React.FC = () => {
               <span key={index} className="bg-marrsgreen dark:bg-carrigreen" />
             ))}
           </div>
+          <span
+            aria-hidden="true"
+            className="neon-bevel-glow absolute inset-0 z-10 pointer-events-none"
+          />
+          <span
+            aria-hidden="true"
+            className="neon-bevel-scan absolute inset-0 z-20 pointer-events-none"
+          />
           <Image
             src={`${basePath}/assets/hero/decade-site-hero.png`}
             alt="Pixel art Decade-inspired rider mascot with a 10z card"
@@ -70,6 +78,97 @@ const HeroSection: React.FC = () => {
           />
         </div>
       </div>
+      <style jsx>{`
+        .neon-bevel-glow {
+          background:
+            linear-gradient(
+                135deg,
+                rgba(6, 95, 70, 0.38),
+                transparent 23%,
+                transparent 72%,
+                rgba(132, 255, 188, 0.34)
+              )
+              border-box,
+            linear-gradient(
+              315deg,
+              transparent 8%,
+              rgba(255, 255, 255, 0.36) 18%,
+              transparent 30%
+            );
+          box-shadow:
+            inset 0 0 18px rgba(6, 95, 70, 0.26),
+            inset 0 0 2px rgba(132, 255, 188, 0.8);
+          mix-blend-mode: screen;
+        }
+
+        .neon-bevel-scan {
+          overflow: hidden;
+          mix-blend-mode: screen;
+        }
+
+        .neon-bevel-scan::before {
+          position: absolute;
+          top: -45%;
+          left: 28%;
+          width: 34%;
+          height: 190%;
+          content: "";
+          animation: neon-bevel-sweep 4.8s ease-in-out infinite;
+          background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(132, 255, 188, 0) 22%,
+            rgba(132, 255, 188, 0.26) 36%,
+            rgba(255, 255, 255, 0.9) 50%,
+            rgba(42, 245, 152, 0.28) 64%,
+            rgba(132, 255, 188, 0) 78%,
+            transparent 100%
+          );
+          filter: blur(0.2px);
+          opacity: 0;
+          transform: translate3d(-250%, 0, 0) rotate(25deg);
+          transform-origin: center;
+          will-change: opacity, transform;
+        }
+
+        :global(.dark) .neon-bevel-glow {
+          box-shadow:
+            inset 0 0 24px rgba(132, 255, 188, 0.24),
+            inset 0 0 3px rgba(132, 255, 188, 0.9);
+        }
+
+        :global(.dark) .neon-bevel-scan::before {
+          background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(132, 255, 188, 0) 22%,
+            rgba(132, 255, 188, 0.36) 36%,
+            rgba(255, 255, 255, 0.96) 50%,
+            rgba(42, 245, 152, 0.38) 64%,
+            rgba(132, 255, 188, 0) 78%,
+            transparent 100%
+          );
+        }
+
+        @keyframes neon-bevel-sweep {
+          0%,
+          18% {
+            opacity: 0;
+            transform: translate3d(-250%, 0, 0) rotate(25deg);
+          }
+          28% {
+            opacity: 1;
+          }
+          48% {
+            opacity: 0.9;
+          }
+          58%,
+          100% {
+            opacity: 0;
+            transform: translate3d(250%, 0, 0) rotate(25deg);
+          }
+        }
+      `}</style>
 
       <div className="lg:basis-2/3 z-10 relative">
         <span className="text-marrsgreen lg:text-lg font-medium dark:text-carrigreen">
