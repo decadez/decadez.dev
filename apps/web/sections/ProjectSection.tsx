@@ -74,20 +74,21 @@ const projects = [
     githubApi: "https://api.github.com/repos/decadez/decadez.dev",
   },
   {
-    title: "AI workflow notes",
-    type: "Writing",
+    title: "UI docs",
+    type: "Documentation",
     image: (
       <div className="h-full w-full p-6 flex flex-col justify-between">
-        <span className="text-sm uppercase tracking-widest">Research</span>
-        <strong className="text-4xl">AI</strong>
+        <span className="text-sm uppercase tracking-widest">Component Docs</span>
+        <strong className="text-4xl">UI</strong>
       </div>
     ),
-    desc: "Notes about agentic coding, evaluation, prompts, and how to keep automation accountable.",
-    tags: ["Agents", "Evaluation", "Workflow"],
-    liveUrl: "https://decadez.github.io/decadez.dev/blog/",
+    desc: "A focused documentation entry for the extracted decadez.dev UI component library.",
+    tags: ["Docs", "Components", "Sandbox"],
+    liveUrl: "https://decadez.github.io/decadez.dev/ui/",
     codeUrl: "https://github.com/decadez/decadez.dev",
     bgColor: "bg-blogice dark:bg-carddark",
     githubApi: "https://api.github.com/repos/decadez/decadez.dev",
+    cardVariant: "plain" as const,
   },
 ];
 

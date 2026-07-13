@@ -1,9 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Card, CardBody, SiteHeader } from "@decadez/web-dev-ui";
-import { docsBasePath } from "@/utils/base-path";
-
-const spriteSrc = `${docsBasePath}/decade-rider-kick-spaced.png`;
 
 export function ComponentCard({
   title,
@@ -52,7 +49,6 @@ export function HeaderPreview() {
           brandHref="#"
           brandLabel="decadez"
           brandAccent=".dev"
-          spriteSrc={spriteSrc}
           navLinks={[
             { url: "#whoami", text: "Who am i?" },
             { url: "#projects", text: "Projects" },

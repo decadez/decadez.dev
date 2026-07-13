@@ -188,44 +188,49 @@ function LivePreview({
   };
 
   return (
-    <SandpackStack className={className}>
-      <div
-        className={cx(
-          "ui-sandpack-preview-panel",
-          !isExpanded &&
-            (error || bundlerIsReady) &&
-            "ui-sandpack-preview-scroll"
-        )}
-      >
-        <div style={iframeWrapperPosition()}>
-          <iframe
-            ref={iframeRef}
-            className={cx(
-              "ui-sandpack-preview-frame",
-              hideContent && "is-hidden"
-            )}
-            title="Sandbox Preview"
-            style={{
-              height: iframeComputedHeight || "15px",
-              zIndex: isExpanded ? "initial" : -1,
-            }}
-          />
-        </div>
-
-        {error && (
-          <div
-            className={cx("ui-sandpack-error-wrap", isExpanded && "is-sticky")}
-          >
-            <ErrorMessage error={error} />
+    <>
+      <SandpackStack className={className}>
+        <div
+          className={cx(
+            "ui-sandpack-preview-panel",
+            !isExpanded &&
+              (error || bundlerIsReady) &&
+              "ui-sandpack-preview-scroll"
+          )}
+        >
+          <div style={iframeWrapperPosition()}>
+            <iframe
+              ref={iframeRef}
+              className={cx(
+                "ui-sandpack-preview-frame",
+                hideContent && "is-hidden"
+              )}
+              title="Sandbox Preview"
+              style={{
+                height: iframeComputedHeight || "15px",
+                zIndex: hideContent ? -1 : "initial",
+              }}
+            />
           </div>
-        )}
-      </div>
+
+          {error && (
+            <div
+              className={cx(
+                "ui-sandpack-error-wrap",
+                isExpanded && "is-sticky"
+              )}
+            >
+              <ErrorMessage error={error} />
+            </div>
+          )}
+        </div>
+      </SandpackStack>
       <SandpackConsole visible={!error} />
       <LoadingOverlay
         clientId={clientId}
         dependenciesLoading={!bundlerIsReady && iframeComputedHeight === null}
         forceLoading={showLoading}
       />
-    </SandpackStack>
+    </>
   );
 }

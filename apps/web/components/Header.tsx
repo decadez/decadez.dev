@@ -96,7 +96,6 @@ const Header: React.FC = () => {
       brandHref={`${basePath}/`}
       brandLabel="decadez"
       brandAccent=".dev"
-      spriteSrc={`${basePath}/assets/sprites/decade-rider-kick/decade-rider-kick-spaced.png`}
       navLinks={navLinks.map(({ svg, ...navLink }) => ({
         ...navLink,
         icon: svg,

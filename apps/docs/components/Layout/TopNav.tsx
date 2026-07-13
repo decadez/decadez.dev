@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { SiteHeader } from "@decadez/web-dev-ui";
-import { docsBasePath } from "@/utils/base-path";
 
-const spriteSrc = `${docsBasePath}/decade-rider-kick-spaced.png`;
 const navLinks = [
-  { url: "/installation", text: "Docs" },
-  { url: "/components", text: "Components" },
+  { url: "/", text: "Quick Start" },
+  { url: "/components/button", text: "Components" },
   { url: "/patterns/publishing", text: "Package" },
 ];
 
@@ -23,7 +21,7 @@ export function TopNav({
     ? "components"
     : currentPath.startsWith("/patterns")
       ? "package"
-      : "docs";
+      : "quick start";
 
   return (
     <SiteHeader
@@ -31,7 +29,6 @@ export function TopNav({
       brandHref="/"
       brandLabel="web.dev"
       brandAccent=".ui"
-      spriteSrc={spriteSrc}
       navLinks={navLinks}
       currentSection={currentSection}
       theme={theme}

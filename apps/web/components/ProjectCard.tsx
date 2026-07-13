@@ -16,6 +16,7 @@ type Props = {
     codeUrl: string;
     bgColor: string;
     githubApi: string;
+    cardVariant?: "default" | "plain";
   };
 };
 
@@ -89,7 +90,10 @@ const ProjectCard: React.FC<Props> = ({ index, project }) => {
 
   return (
     <div ref={sectionRef} className={`md:basis-1/2 md:px-8 py-2 md:py-4`}>
-      <Card className={`project-card project-card-${index}`}>
+      <Card
+        variant={project.cardVariant}
+        className={`project-card project-card-${index}`}
+      >
         <div className="overflow-hidden">
           <div
             className={`project-image ${project.bgColor} relative aspect-[16/9]`}

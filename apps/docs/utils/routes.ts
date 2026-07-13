@@ -1,4 +1,4 @@
-import { getAllPagePaths, getPageByPath, routeTree } from "@/content/routes";
+import { getAllPagePaths, getPageByPath, routeTree } from "@/utils/docs";
 
 export function normalizePath(markdownPath?: string[]) {
   if (!markdownPath || markdownPath.length === 0) {

@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import type { TocItem } from "@/content/routes";
+import type { TocItem } from "@/utils/docs";
 
 const topOffset = 96;
+const activationTolerance = 4;
 
 function getTocElements(headings: TocItem[]) {
   return headings
@@ -36,7 +37,7 @@ export function useTocHighlight(headings: TocItem[]) {
         const element = elements[index + 1];
         const { top } = element.getBoundingClientRect();
 
-        if (top >= topOffset) {
+        if (top > topOffset + activationTolerance) {
           break;
         }
 
