@@ -72,9 +72,10 @@ const projects = [
     codeUrl: "https://github.com/decadez/decadez.dev",
     bgColor: "bg-blogmist dark:bg-carddark",
     githubApi: "https://api.github.com/repos/decadez/decadez.dev",
+    cardVariant: "plain" as const,
   },
   {
-    title: "UI docs",
+    title: "Web dev UI",
     type: "Documentation",
     image: (
       <div className="h-full w-full p-6 flex flex-col justify-between">
