@@ -1,0 +1,25 @@
+apps/web/sections/HeroSection.tsx
+  s_9057c64336c068::t_777f39d76e5dca 162
+  s_9057c64336c068::t_c906ac23fddc52 105-115,118,120-121,123-124,127,129-131,140,142,144-145,147-148,157,168
+  s_9057c64336c068::t_98d8ab8957cee5 117,119,122,125-126,141,143,146,149-150
+  s_9057c64336c068::t_02a8900e1da5df 165
+  s_9057c64336c068::t_e1b77e9fc3ba4f 63-68,70,81-104,116,132-139,151-156,158-161,163-164,166-167,169-171
+  s_9057c64336c068::t_a4cda045cfbb31 69
+  s_9057c64336c068::t_5804bb17b1ef21 128
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.33-trip",
+  "base_commit_sha": "fa4e6020ae069be8309c20c40093b282156ff1d3",
+  "prompts": {},
+  "sessions": {
+    "s_9057c64336c068": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f5b5f-f313-70c3-87ea-01f38902f9f5",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
