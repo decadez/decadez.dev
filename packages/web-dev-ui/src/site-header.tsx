@@ -1,4 +1,4 @@
-import { forwardRef, type ReactNode } from "react";
+import { forwardRef, type ElementType, type ReactNode } from "react";
 import { RiderKickLogo } from "./rider-kick-logo";
 import { StatusIndicator, type StatusIndicatorState } from "./status-indicator";
 
@@ -8,12 +8,20 @@ export type SiteHeaderNavLink = {
   icon?: ReactNode;
 };
 
+export type SiteHeaderLinkComponent = ElementType<{
+  href: string;
+  className?: string;
+  children: ReactNode;
+  "aria-label"?: string;
+}>;
+
 export type SiteHeaderProps = {
   brandHref: string;
   brandLabel: string;
   brandAccent?: string;
   spriteSrc?: string;
   navLinks: SiteHeaderNavLink[];
+  LinkComponent?: SiteHeaderLinkComponent;
   currentSection?: string;
   navClassName?: string;
   theme?: string;
@@ -29,6 +37,7 @@ export const SiteHeader = forwardRef<HTMLDivElement, SiteHeaderProps>(
       brandAccent = "",
       spriteSrc,
       navLinks,
+      LinkComponent = "a",
       currentSection = "",
       navClassName = "",
       theme,
@@ -43,13 +52,13 @@ export const SiteHeader = forwardRef<HTMLDivElement, SiteHeaderProps>(
           ref={ref}
           className={`main-nav lower-glassmorphism bg-bglight dark:bg-bgdark z-30 top-0 shadow-sm fixed px-4 sm:px-8 h-16 w-full ${navClassName}`}
         >
-          <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
-            <a
+          <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between gap-3">
+            <LinkComponent
               href={brandHref}
-              className="flex items-center gap-2 text-xl sm:text-2xl md:hover:text-marrsgreen dark:md:hover:text-carrigreen focus-visible:outline-marrsgreen dark:focus-visible:outline-carrigreen"
+              className="min-w-0 flex shrink items-center gap-2 text-xl sm:text-2xl md:hover:text-marrsgreen dark:md:hover:text-carrigreen focus-visible:outline-marrsgreen dark:focus-visible:outline-carrigreen"
             >
               {spriteSrc && <RiderKickLogo spriteSrc={spriteSrc} />}
-              <span>
+              <span className="min-w-0 truncate">
                 {brandLabel}
                 {brandAccent && (
                   <span className="text-marrsgreen dark:text-carrigreen">
@@ -57,26 +66,28 @@ export const SiteHeader = forwardRef<HTMLDivElement, SiteHeaderProps>(
                   </span>
                 )}
               </span>
-            </a>
-            <nav className="flex items-center">
-              <div className="glassmorphism md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform -translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-textlight w-11/12 rounded drop-shadow-lg md:drop-shadow-none">
+            </LinkComponent>
+            <nav className="flex shrink-0 items-center">
+              <div className="site-header-nav-menu glassmorphism md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform -translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-textlight w-11/12 rounded drop-shadow-lg md:drop-shadow-none">
                 <ul className="flex justify-evenly items-center py-1">
                   {navLinks.map((navLink) => (
                     <li key={navLink.url}>
-                      <a
+                      <LinkComponent
                         href={navLink.url}
-                        className={`text-sm md:text-lg flex flex-col items-center w-[4.5rem] md:w-auto dark:fill-textlight md:mr-6 md:hover:text-marrsgreen md:dark:hover:text-carrigreen link-outline ${
+                        className={`site-header-nav-link text-sm md:text-lg flex flex-col items-center w-[4.5rem] md:w-auto dark:fill-textlight md:mr-6 md:hover:text-marrsgreen md:dark:hover:text-carrigreen link-outline ${
                           currentSection === navLink.text.toLocaleLowerCase() &&
                           "text-marrsgreen dark:text-carrigreen fill-marrsgreen dark:fill-carrigreen"
                         }`}
                       >
                         {navLink.icon && (
-                          <span className="md:hidden">{navLink.icon}</span>
+                          <span className="site-header-nav-icon md:hidden">
+                            {navLink.icon}
+                          </span>
                         )}
                         <span className="whitespace-nowrap">
                           {navLink.text}
                         </span>
-                      </a>
+                      </LinkComponent>
                     </li>
                   ))}
                 </ul>

@@ -64,12 +64,12 @@ jobs:
       - name: Build UI docs
         run: pnpm --filter @decadez/docs build
         env:
-          STORYBOOK_BASE_PATH: /decadez.dev/ui/
+          GITHUB_PAGES: "true"
 
       - name: Attach UI docs
         run: |
           mkdir -p apps/web/out/ui
-          cp -R apps/docs/storybook-static/. apps/web/out/ui/
+          cp -R apps/docs/out/. apps/web/out/ui/
 
       - name: Add Pages marker
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
