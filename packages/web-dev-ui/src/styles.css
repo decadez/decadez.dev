@@ -1,3 +1,39 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "./**/*.{ts,tsx}";
+
+@theme {
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1440px;
+
+  --font-sans: "Jost", sans-serif;
+
+  --color-bglight: #f9fafb;
+  --color-marrslight: #bfc8f8;
+  --color-marrsgreen: #8f79d9;
+  --color-marrsdark: #4a416a;
+  --color-bloglavender: #e3c9fa;
+  --color-blogperiwinkle: #bfc8f8;
+  --color-blogmist: #dcebfa;
+  --color-blogice: #f4f8fc;
+  --color-blogink: #4a416a;
+  --color-blogviolet: #8f79d9;
+  --color-blogdark: #1c1930;
+  --color-blogcarddark: #26233b;
+  --color-cardlight: #eff3f3;
+  --color-bgdark: #1d2a35;
+  --color-carrilight: #dcebfa;
+  --color-carrigreen: #e3c9fa;
+  --color-carridark: #bfc8f8;
+  --color-carddark: #22323f;
+  --color-textlight: #f9fafb;
+}
+
 @font-face {
   font-family: "Jost";
   font-style: normal;

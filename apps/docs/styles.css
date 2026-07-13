@@ -1,21 +1,9 @@
-@import "tailwindcss";
 @import "@decadez/web-dev-ui/styles.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@source "../../packages/web-dev-ui/src/**/*.{ts,tsx}";
 @source "./components/**/*.{ts,tsx}";
 @source "./pages/**/*.{ts,tsx}";
-
-@theme {
-  --font-sans: var(--web-dev-ui-font-sans);
-  --color-bglight: #f9fafb;
-  --color-marrsgreen: #8f79d9;
-  --color-bgdark: #1d2a35;
-  --color-carrigreen: #e3c9fa;
-  --color-carddark: #22323f;
-  --color-textlight: #f9fafb;
-}
 
 html {
   scroll-behavior: smooth;
