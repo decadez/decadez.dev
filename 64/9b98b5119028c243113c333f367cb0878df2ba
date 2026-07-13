@@ -1,0 +1,116 @@
+packages/web-dev-ui/src/styles.css
+  s_0b12f059e77bdd::t_f313c87c99e7db 48-58
+  s_0b12f059e77bdd::t_9bbdabc7979018 59-297
+  s_0b12f059e77bdd::t_d654693ec0ea25 6-7,13,15-16,21-38,42-43
+  s_0b12f059e77bdd::t_ff575831581970 17-18
+  s_0b12f059e77bdd::t_1313b7147e0b81 1-5,8-12,14,19-20,39-41,44-47
+  s_0b12f059e77bdd::t_9a8224a30ad02a 298-452
+apps/docs/components/Layout/useTocHighlight.ts
+  s_0b12f059e77bdd::t_171bbeedc6c1d6 1-74
+apps/docs/components/Layout/SidebarNav.tsx
+  s_0b12f059e77bdd::t_79701c4dcec440 1
+  s_0b12f059e77bdd::t_171bbeedc6c1d6 2-3,7-9,11-16
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 4-6,10,17-18
+packages/web-dev-ui/src/docs-menu.tsx
+  s_0b12f059e77bdd::t_9a8224a30ad02a 1-147
+.github/workflows/deploy-pages.yml
+  s_0b12f059e77bdd::t_f38d15f1dcd579 67,72
+apps/docs/pages/[[...markdownPath]].tsx
+  s_0b12f059e77bdd::t_da777527c2d9bb 3,8,13-19,44
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 1-2,4-7,9-12,20-27,30-43,45-49
+apps/docs/postcss.config.js
+  s_0b12f059e77bdd::t_cd3e8ba40f1aad 1-3
+apps/docs/components/DocBlocks.tsx
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 1-3,5,7-45,47-72
+  s_0b12f059e77bdd::t_514e1ca7f5c150 4,6
+  s_0b12f059e77bdd::t_87d64d0b1c156a 46
+packages/web-dev-ui/src/utils.ts
+  s_0b12f059e77bdd::t_c28e369ecd3437 1-3
+packages/web-dev-ui/src/index.ts
+  s_0b12f059e77bdd::t_c28e369ecd3437 1-4,6
+  s_0b12f059e77bdd::t_9a8224a30ad02a 5
+apps/docs/utils/base-path.ts
+  s_0b12f059e77bdd::t_79701c4dcec440 1-9
+packages/web-dev-ui/src/badge.tsx
+  s_0b12f059e77bdd::t_c28e369ecd3437 1-15
+packages/web-dev-ui/src/code.tsx
+  s_0b12f059e77bdd::t_c28e369ecd3437 1-23
+apps/docs/components/Layout/Page.tsx
+  s_0b12f059e77bdd::t_87d64d0b1c156a 1,9-12,30-35,37,40-41,43-46,48-51,56
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 2-8,21-29,52-55,57-84
+  s_0b12f059e77bdd::t_6f6d281e627f02 42
+  s_0b12f059e77bdd::t_6cdd9ac4bea571 13-20,36,38-39,47
+apps/docs/pages/_document.tsx
+  s_0b12f059e77bdd::t_6f6d281e627f02 3-19,27
+  s_0b12f059e77bdd::t_87d64d0b1c156a 24
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 1-2,20-23,25-26,28-33
+apps/docs/pages/404.tsx
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 3-6,8-10
+  s_0b12f059e77bdd::t_7e9d0433b9ae42 1-2,7
+packages/web-dev-ui/src/site-header.tsx
+  s_0b12f059e77bdd::t_9e9c8559ac5761 58,71,77,83-85
+  s_0b12f059e77bdd::t_2640e87328ae45 55,61,70
+  s_0b12f059e77bdd::t_6f6d281e627f02 1,11-17,24,40,56,69,75,90
+apps/web/components/ProjectCard.tsx
+  s_0b12f059e77bdd::t_78d86551f6e685 3,92,183-184,188
+apps/docs/content/routes.tsx
+  s_0b12f059e77bdd::t_79701c4dcec440 1-6,8-12,14-371
+packages/web-dev-ui/src/layout.tsx
+  s_0b12f059e77bdd::t_c28e369ecd3437 1-63
+apps/docs/tsconfig.json
+  s_0b12f059e77bdd::t_f55f03b07af8e1 14
+  s_0b12f059e77bdd::t_69603ba1ac7ba9 25-33
+  s_0b12f059e77bdd::t_cd3e8ba40f1aad 15-19
+apps/docs/utils/routes.ts
+  s_0b12f059e77bdd::t_500db4128ef895 12-17
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 1-11,18-36
+apps/docs/components/Layout/Footer.tsx
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 2-13,15-16,18-21,23-24,26-31
+  s_0b12f059e77bdd::t_79701c4dcec440 1,14,17,22,25
+apps/docs/components/Layout/TopNav.tsx
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 13-19,28,40-41
+  s_0b12f059e77bdd::t_6f6d281e627f02 1,4,8-10,30-33
+  s_0b12f059e77bdd::t_e9c07f5dd0216b 2,20-26,29,34-39
+  s_0b12f059e77bdd::t_79701c4dcec440 6
+apps/docs/package.json
+  s_0b12f059e77bdd::t_cd3e8ba40f1aad 6-7,12,21
+apps/docs/styles.css
+  s_0b12f059e77bdd::t_867378ee4fc009 390-402
+  s_0b12f059e77bdd::t_cd3e8ba40f1aad 6-8,11,20-23,25-223,226-230,233-236,239-389,403-455
+packages/web-dev-ui/src/link-button.tsx
+  s_0b12f059e77bdd::t_c28e369ecd3437 2,30-35
+apps/web/styles/globals.css
+  s_0b12f059e77bdd::t_50409ac42b88be 39-57,60-76
+packages/web-dev-ui/src/button.tsx
+  s_0b12f059e77bdd::t_c28e369ecd3437 1-31
+packages/web-dev-ui/src/card.tsx
+  s_0b12f059e77bdd::t_c28e369ecd3437 1-31
+apps/web/sections/AboutSection.tsx
+  s_0b12f059e77bdd::t_78d86551f6e685 4,96,101
+apps/docs/components/Layout/Toc.tsx
+  s_0b12f059e77bdd::t_171bbeedc6c1d6 2,5-6,13-19
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 1,4,8-12,20-23,25-27
+apps/docs/next.config.js
+  s_0b12f059e77bdd::t_79701c4dcec440 10-11
+  s_0b12f059e77bdd::t_cd3e8ba40f1aad 1-2,4-9,13-14,18
+apps/docs/pages/_app.tsx
+  s_0b12f059e77bdd::t_bc49ff588b7e8a 1-6
+apps/docs/next-env.d.ts
+  s_0b12f059e77bdd::t_cd3e8ba40f1aad 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.33-trip",
+  "base_commit_sha": "649b98b5119028c243113c333f367cb0878df2ba",
+  "prompts": {},
+  "sessions": {
+    "s_0b12f059e77bdd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f4642-2919-7c52-af6b-3140cb565ca3",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
