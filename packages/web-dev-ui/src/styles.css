@@ -152,6 +152,13 @@ textarea {
   background: #26233b;
 }
 
+.ui-card--plain,
+.dark .ui-card--plain {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
 .ui-card__header {
   padding: 1rem 1rem 0;
 }
@@ -304,16 +311,16 @@ textarea {
 }
 
 .ui-mdx-heading--h1 {
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 0.98;
 }
 
 .ui-mdx-heading--h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .ui-mdx-heading--h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .ui-mdx-heading--h4 {
@@ -376,6 +383,41 @@ textarea {
 .dark .ui-mdx-blockquote {
   border-left-color: #e3c9fa;
   background: rgb(38 35 59 / 0.82);
+}
+
+.ui-mdx-table-wrap {
+  overflow-x: auto;
+}
+
+.ui-mdx-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.ui-mdx-table th,
+.ui-mdx-table td {
+  border-bottom: 1px solid rgb(143 121 217 / 0.16);
+  padding: 0.875rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.ui-mdx-table th {
+  color: rgb(29 42 53 / 0.72);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dark .ui-mdx-table th,
+.dark .ui-mdx-table td {
+  border-bottom-color: rgb(227 201 250 / 0.12);
+}
+
+.dark .ui-mdx-table th {
+  color: rgb(249 250 251 / 0.72);
 }
 
 .ui-mdx-callout {
@@ -600,6 +642,8 @@ textarea {
 
 .ui-sandpack-layout.sp-layout {
   display: flex;
+  width: 100%;
+  max-width: 100%;
   min-height: 216px;
   align-items: stretch;
   flex-wrap: wrap;
@@ -611,7 +655,7 @@ textarea {
 }
 
 .ui-sandpack-layout .sp-stack {
-  min-width: min(100%, 24rem);
+  min-width: 0;
   flex: 1 1 24rem;
 }
 
@@ -620,6 +664,10 @@ textarea {
   overflow: auto;
   background: #fbfdff;
   color: #1d2a35;
+}
+
+.ui-sandpack-layout.sp-layout-expanded .sp-editor {
+  max-height: none;
 }
 
 .dark .ui-sandpack-layout .sp-editor {
@@ -785,6 +833,8 @@ textarea {
 }
 
 .sandpack-expand {
+  position: relative;
+  z-index: 3;
   display: flex;
   width: 100%;
   order: 2;
@@ -820,6 +870,7 @@ textarea {
 
 .ui-sandpack-console {
   position: relative;
+  order: 3;
   width: 100%;
   border-top: 1px solid rgb(143 121 217 / 0.16);
   background: #ffffff;
@@ -851,6 +902,7 @@ textarea {
 }
 
 .ui-sandpack-console-lines {
+  min-height: 6rem;
   max-height: 10rem;
   overflow: auto;
   border-top: 1px solid rgb(143 121 217 / 0.16);
@@ -874,6 +926,16 @@ textarea {
 
 .ui-sandpack-console-line:first-child {
   border-top: 0;
+}
+
+.ui-sandpack-console-empty {
+  color: rgb(29 42 53 / 0.5);
+  font-size: 0.8125rem;
+  padding: 0.75rem;
+}
+
+.dark .ui-sandpack-console-empty {
+  color: rgb(249 250 251 / 0.5);
 }
 
 .ui-sandpack-console-line--warning {
@@ -986,6 +1048,102 @@ textarea {
 }
 
 @media (max-width: 48rem) {
+  .ui-mdx-sandbox-wrapper,
+  .ui-mdx-sandbox,
+  .ui-mdx-sandbox .sp-wrapper,
+  .ui-sandpack-shell,
+  .ui-sandpack-layout.sp-layout {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .ui-sandpack-navigation {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding-inline: 0.5rem;
+  }
+
+  .ui-sandpack-tabs,
+  .ui-sandpack-actions {
+    min-width: 0;
+  }
+
+  .ui-sandpack-tabs {
+    flex: 1 1 10rem;
+    padding-inline: 0;
+  }
+
+  .ui-sandpack-actions {
+    flex: 0 1 auto;
+    gap: 0;
+    padding-inline: 0;
+  }
+
+  .ui-sandpack-action {
+    min-width: 2rem;
+    padding-inline: 0.25rem;
+  }
+
+  .ui-sandpack-tabs .sp-tabs-scrollable-container {
+    max-width: 100%;
+  }
+
+  .ui-sandpack-layout .sp-stack,
+  .ui-sandpack-layout .sp-editor,
+  .ui-sandpack-preview-stack,
+  .ui-sandpack-console,
+  .sandpack-expand {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: 0 0 100%;
+  }
+
+  .ui-sandpack-layout .sp-editor {
+    order: 0;
+    max-height: 20rem;
+  }
+
+  .ui-sandpack-preview-stack {
+    order: 1;
+  }
+
+  .ui-sandpack-console {
+    order: 2;
+  }
+
+  .sandpack-expand {
+    order: 3;
+  }
+
+  .ui-sandpack-preview-panel {
+    min-height: 14rem;
+    padding: 0.75rem;
+  }
+
+  .ui-sandpack-preview-frame {
+    box-shadow: 0 6px 18px rgb(29 42 53 / 0.12);
+  }
+
+  .ui-sandpack-layout .sp-code-editor,
+  .ui-sandpack-layout .cm-editor {
+    min-height: 18rem;
+    font-size: 0.8125rem;
+  }
+
+  .ui-sandpack-layout .cm-scroller {
+    overflow: auto;
+  }
+
+  .ui-sandpack-layout .cm-content {
+    min-width: max-content;
+  }
+
+  .ui-sandpack-console-lines {
+    min-height: 5rem;
+  }
+
   .ui-sandpack-action span:not(.ui-sandpack-action-icon) {
     display: none;
   }
@@ -1291,8 +1449,9 @@ textarea {
 
 .ui-docs-menu-sections {
   display: grid;
+  margin-top: 0.75rem;
   align-content: start;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .ui-docs-menu-section-title {
@@ -1314,9 +1473,10 @@ textarea {
 }
 
 .ui-docs-menu-link {
-  border-radius: 999px;
+  border-left: 2px solid transparent;
+  border-radius: 0;
   color: rgb(29 42 53 / 0.72);
-  padding: 0.5rem 0.75rem;
+  padding: 0.375rem 0.75rem;
   text-decoration: none;
   transition:
     background-color 150ms ease,
@@ -1328,25 +1488,29 @@ textarea {
 }
 
 .ui-docs-menu-link:hover {
-  background: rgb(143 121 217 / 0.12);
+  background: transparent;
+  border-left-color: rgb(143 121 217 / 0.35);
   color: #8f79d9;
 }
 
 .dark .ui-docs-menu-link:hover {
-  background: rgb(227 201 250 / 0.1);
+  background: transparent;
+  border-left-color: rgb(227 201 250 / 0.35);
   color: #e3c9fa;
 }
 
 .ui-docs-menu-link--active,
 .ui-docs-menu-link--active:hover {
-  background: rgb(143 121 217 / 0.16);
+  background: transparent;
+  border-left-color: #8f79d9;
   color: #8f79d9;
   font-weight: 650;
 }
 
 .dark .ui-docs-menu-link--active,
 .dark .ui-docs-menu-link--active:hover {
-  background: rgb(227 201 250 / 0.12);
+  background: transparent;
+  border-left-color: #e3c9fa;
   color: #e3c9fa;
 }
 
@@ -1381,6 +1545,7 @@ textarea {
   left: 0;
   width: 34px;
   height: 62px;
+  background-image: url("./assets/decade-rider-kick-spaced.png");
   background-repeat: no-repeat;
   background-size: 272px 62px;
   image-rendering: pixelated;
