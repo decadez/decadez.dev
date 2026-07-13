@@ -1,0 +1,19 @@
+apps/web/next-env.d.ts
+  s_dcbacc8b5edbb2::t_f2e3034533bcdb 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.33-trip",
+  "base_commit_sha": "51f78f08bf2f7a9890004f178e7040a8afe5fd17",
+  "prompts": {},
+  "sessions": {
+    "s_dcbacc8b5edbb2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f5b83-a842-7d92-b8dd-755b80192678",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
