@@ -1,4 +1,4 @@
-import type { TocItem } from "@/content/routes";
+import type { TocItem } from "@/utils/docs";
 import { useTocHighlight } from "./useTocHighlight";
 
 export function Toc({ headings }: { headings: TocItem[] }) {

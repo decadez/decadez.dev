@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import type { DocPage, RouteItem } from "@/content/routes";
-import { routeTree } from "@/content/routes";
+import type { DocPage, RouteItem, TocItem } from "@/utils/docs";
+import { routeTree } from "@/utils/docs";
+import { MarkdownDoc } from "@/components/MarkdownDoc";
 import { TopNav } from "./TopNav";
 import { SidebarNav } from "./SidebarNav";
 import { Toc } from "./Toc";
@@ -20,10 +21,14 @@ function applyDocsTheme(theme: DocsTheme) {
 
 export function Page({
   page,
+  source,
+  toc,
   prevRoute,
   nextRoute,
 }: {
   page: DocPage;
+  source: string;
+  toc: TocItem[];
   prevRoute: RouteItem | null;
   nextRoute: RouteItem | null;
 }) {
@@ -72,11 +77,11 @@ export function Page({
                   <p>{page.description}</p>
                 </header>
               )}
-              {page.content}
+              <MarkdownDoc source={source} />
               <DocsFooter prevRoute={prevRoute} nextRoute={nextRoute} />
             </article>
           </main>
-          <Toc headings={page.toc} />
+          <Toc headings={toc} />
         </div>
       </div>
     </div>

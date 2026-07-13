@@ -26,6 +26,8 @@ import {
   LearnMore,
   Link,
   MDXComponentCoverageList,
+  MDXList,
+  MDXListItem,
   MDXParagraph,
   MDXSandbox,
   OpenInTypeScriptPlaygroundButton,
@@ -91,7 +93,7 @@ export default function App() {
 const sandboxPreview = (
   <main className="docs-sandbox-demo">
     <section className="docs-sandbox-demo-card">
-      <p>Ship docs examples as live component states.</p>
+      <MDXParagraph>Ship docs examples as live component states.</MDXParagraph>
       <button type="button">Preview action</button>
     </section>
   </main>
@@ -163,17 +165,17 @@ export function MdxComponentGallery() {
   return (
     <div className="docs-mdx-gallery">
       <section id="coverage" className="docs-section docs-section--first">
-        <h2>Source coverage</h2>
-        <p>
+        <H2>Source coverage</H2>
+        <MDXParagraph>
           The UI package mirrors the useful MDX surface from the local source
           tree and exposes it through{" "}
           <InlineCode>@decadez/web-dev-ui/mdx</InlineCode>.
-        </p>
+        </MDXParagraph>
         <MDXComponentCoverageList names={reactDevMdxComponentNames} />
       </section>
 
       <section id="prose" className="docs-section">
-        <h2>Prose components</h2>
+        <H2>Prose components</H2>
         <div className="docs-card-grid">
           <div className="docs-example">
             <Intro>
@@ -209,13 +211,13 @@ export function MdxComponentGallery() {
       </section>
 
       <section id="learning" className="docs-section">
-        <h2>Learning blocks</h2>
+        <H2>Learning blocks</H2>
         <div className="docs-card-grid">
           <YouWillLearnCard>
-            <ul className="ui-mdx-list ui-mdx-list--unordered">
-              <li className="ui-mdx-list-item">How the component behaves.</li>
-              <li className="ui-mdx-list-item">Which states to test.</li>
-            </ul>
+            <MDXList>
+              <MDXListItem>How the component behaves.</MDXListItem>
+              <MDXListItem>Which states to test.</MDXListItem>
+            </MDXList>
           </YouWillLearnCard>
           <Recap>
             <MDXParagraph>Recap wraps summary content.</MDXParagraph>
@@ -234,7 +236,7 @@ export function MdxComponentGallery() {
       </section>
 
       <section id="diagrams" className="docs-section">
-        <h2>Diagrams and code</h2>
+        <H2>Diagrams and code</H2>
         <DiagramGroup>
           <Diagram title="Diagram">
             <span>State A {"->"} State B</span>
@@ -255,7 +257,7 @@ export function MdxComponentGallery() {
       </section>
 
       <section id="challenges" className="docs-section">
-        <h2>Challenges</h2>
+        <H2>Challenges</H2>
         <Challenges>
           <Challenge title="Wire the component">
             <MDXParagraph>Use the exported MDX primitives.</MDXParagraph>
@@ -269,11 +271,11 @@ export function MdxComponentGallery() {
       </section>
 
       <section id="sandbox" className="docs-section">
-        <h2>Sandbox</h2>
-        <p>
+        <H2>Sandbox</H2>
+        <MDXParagraph>
           The main sandbox uses Sandpack: source files create an isolated live
           preview.
-        </p>
+        </MDXParagraph>
         <MDXSandbox
           activeFile="/src/App.js"
           files={sandboxFiles}
@@ -282,12 +284,12 @@ export function MdxComponentGallery() {
       </section>
 
       <section id="sandbox-parts" className="docs-section">
-        <h2>Sandbox parts</h2>
-        <p>
+        <H2>Sandbox parts</H2>
+        <MDXParagraph>
           Provider-bound pieces such as NavigationBar, Preview, Console,
           LoadingOverlay, RscFileBridge, and the action buttons render inside
           the live sandbox above. Standalone helpers can be composed directly.
-        </p>
+        </MDXParagraph>
         <div className="docs-card-grid docs-card-grid--compact">
           <ErrorMessage
             error={{
@@ -303,7 +305,7 @@ export function MdxComponentGallery() {
       </section>
 
       <section id="contexts" className="docs-section">
-        <h2>Contexts</h2>
+        <H2>Contexts</H2>
         <LanguagesContext.Provider value={["JavaScript", "TypeScript"]}>
           <TocContext.Provider
             value={[{ url: "#contexts", text: "Contexts", depth: 2 }]}

@@ -184,22 +184,47 @@ body {
 .docs-hero h1 {
   max-width: 48rem;
   margin: 0;
-  font-size: clamp(3rem, 9vw, 5.5rem);
+  font-size: clamp(2.25rem, 6vw, 4rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 0.95;
 }
 
-.docs-hero p,
-.docs-section p {
+.docs-page-heading {
+  display: grid;
+  gap: 1rem;
+  padding-block: 1.5rem 2rem;
+}
+
+.docs-page-heading h1 {
+  max-width: 48rem;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 0.96;
+}
+
+.docs-page-heading p {
+  max-width: 42rem;
+  margin: 0;
+  color: rgb(29 42 53 / 0.72);
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.dark .docs-page-heading p {
+  color: rgb(249 250 251 / 0.76);
+}
+
+.docs-hero p {
   max-width: 44rem;
   color: rgb(29 42 53 / 0.72);
   font-size: 1.0625rem;
   line-height: 1.85;
 }
 
-.dark .docs-hero p,
-.dark .docs-section p {
+.dark .docs-hero p {
   color: rgb(249 250 251 / 0.76);
 }
 
@@ -215,19 +240,11 @@ body {
   display: grid;
   gap: 1.25rem;
   scroll-margin-top: 6rem;
-  padding-block: 2.5rem;
   border-top: 1px solid rgb(143 121 217 / 0.16);
 }
 
 .dark .docs-section {
   border-top-color: rgb(227 201 250 / 0.12);
-}
-
-.docs-section h2 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 650;
-  letter-spacing: 0;
 }
 
 .docs-card-grid {

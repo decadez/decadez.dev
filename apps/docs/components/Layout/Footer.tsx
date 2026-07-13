@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { RouteItem } from "@/content/routes";
+import type { RouteItem } from "@/utils/docs";
 
 export function DocsFooter({
   prevRoute,

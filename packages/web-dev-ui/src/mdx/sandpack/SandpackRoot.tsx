@@ -58,6 +58,13 @@ function getFileCode(
   return file?.code ?? fallback;
 }
 
+function getFilesKey(files: SandpackFiles) {
+  return Object.keys(files)
+    .sort()
+    .map((filePath) => `${filePath}:${getFileCode(files, filePath)}`)
+    .join("\n---\n");
+}
+
 export default function SandpackRoot(props: SandpackRootProps) {
   const {
     children,
@@ -89,10 +96,12 @@ export default function SandpackRoot(props: SandpackRootProps) {
         ? true
         : !(files["/src/styles.css"] as { visible?: boolean }).visible,
   };
+  const filesKey = getFilesKey(files);
 
   return (
     <div className="sandpack sandpack--playground ui-mdx-sandbox" dir="ltr">
       <SandpackProvider
+        key={filesKey}
         files={{ ...baseTemplate, ...files }}
         template={templateName}
         theme={CustomTheme}

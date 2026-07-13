@@ -19,7 +19,7 @@ export type SiteHeaderProps = {
   brandHref: string;
   brandLabel: string;
   brandAccent?: string;
-  spriteSrc?: string;
+  brandLogo?: ReactNode;
   navLinks: SiteHeaderNavLink[];
   LinkComponent?: SiteHeaderLinkComponent;
   currentSection?: string;
@@ -35,7 +35,7 @@ export const SiteHeader = forwardRef<HTMLDivElement, SiteHeaderProps>(
       brandHref,
       brandLabel,
       brandAccent = "",
-      spriteSrc,
+      brandLogo,
       navLinks,
       LinkComponent = "a",
       currentSection = "",
@@ -57,7 +57,7 @@ export const SiteHeader = forwardRef<HTMLDivElement, SiteHeaderProps>(
               href={brandHref}
               className="min-w-0 flex shrink items-center gap-2 text-xl sm:text-2xl md:hover:text-marrsgreen dark:md:hover:text-carrigreen focus-visible:outline-marrsgreen dark:focus-visible:outline-carrigreen"
             >
-              {spriteSrc && <RiderKickLogo spriteSrc={spriteSrc} />}
+              {brandLogo ?? <RiderKickLogo />}
               <span className="min-w-0 truncate">
                 {brandLabel}
                 {brandAccent && (
