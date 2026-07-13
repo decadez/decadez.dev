@@ -12,6 +12,7 @@ import {
   Callout,
   HeaderPreview,
 } from "@/components/DocBlocks";
+import { MdxComponentGallery } from "@/components/MdxComponentGallery";
 import { docsHref } from "@/utils/base-path";
 
 export type RouteItem = {
@@ -86,6 +87,12 @@ export const routeTree: RouteItem[] = [
         path: "/components/site-header",
         title: "SiteHeader",
         description: "The site navigation composition.",
+        section: "components",
+      },
+      {
+        path: "/components/mdx",
+        title: "MDX",
+        description: "Documentation primitives and live sandboxes.",
         section: "components",
       },
     ],
@@ -234,6 +241,7 @@ export const pages: DocPage[] = [
           <ComponentCard title="Card">Content surfaces.</ComponentCard>
           <ComponentCard title="Code">Technical text.</ComponentCard>
           <ComponentCard title="SiteHeader">Site navigation.</ComponentCard>
+          <ComponentCard title="MDX">Docs prose and sandboxes.</ComponentCard>
         </div>
       </section>
     ),
@@ -327,6 +335,23 @@ export const pages: DocPage[] = [
         </section>
       </>
     ),
+  },
+  {
+    path: "/components/mdx",
+    title: "MDX",
+    description: "Documentation primitives and live sandboxes.",
+    breadcrumbs: ["Docs", "Components"],
+    toc: [
+      { url: "#coverage", text: "Source coverage", depth: 2 },
+      { url: "#prose", text: "Prose components", depth: 2 },
+      { url: "#learning", text: "Learning blocks", depth: 2 },
+      { url: "#diagrams", text: "Diagrams and code", depth: 2 },
+      { url: "#challenges", text: "Challenges", depth: 2 },
+      { url: "#sandbox", text: "Sandbox", depth: 2 },
+      { url: "#sandbox-parts", text: "Sandbox parts", depth: 2 },
+      { url: "#contexts", text: "Contexts", depth: 2 },
+    ],
+    content: <MdxComponentGallery />,
   },
   {
     path: "/patterns/composition",
