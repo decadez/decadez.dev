@@ -14,6 +14,8 @@
     "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
+      "@decadez/web-dev-ui": ["../../packages/web-dev-ui/src/index.ts"],
+      "@decadez/web-dev-ui/mdx": ["../../packages/web-dev-ui/src/mdx/index.ts"],
       "@/components/*": ["components/*"],
       "@/content/*": ["content/*"],
       "@/utils/*": ["utils/*"]

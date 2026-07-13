@@ -1,0 +1,33 @@
+export const CustomTheme = {
+  colors: {
+    accent: "inherit",
+    base: "inherit",
+    clickable: "inherit",
+    disabled: "inherit",
+    error: "inherit",
+    errorSurface: "inherit",
+    hover: "inherit",
+    surface1: "inherit",
+    surface2: "inherit",
+    surface3: "inherit",
+    warning: "inherit",
+    warningSurface: "inherit",
+  },
+  syntax: {
+    plain: "inherit",
+    comment: "inherit",
+    keyword: "inherit",
+    tag: "inherit",
+    punctuation: "inherit",
+    definition: "inherit",
+    property: "inherit",
+    static: "inherit",
+    string: "inherit",
+  },
+  font: {
+    body: "Jost, Inter, ui-sans-serif, system-ui, sans-serif",
+    mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace',
+    size: "14px",
+    lineHeight: "24px",
+  },
+};
