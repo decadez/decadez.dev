@@ -1,0 +1,124 @@
+packages/web-dev-ui/src/mdx/sandpack/Preview.tsx
+  s_1f372f23d4aeb6::t_93e5640c6241b5 191-210,212-213,215-227,234
+  s_1f372f23d4aeb6::t_aa32e3f24d2bc4 211
+packages/web-dev-ui/src/site-header.tsx
+  s_1f372f23d4aeb6::t_470f2c70b17ce5 22,38,60
+apps/docs/content/patterns/composition.md
+  s_1f372f23d4aeb6::t_2236a3c5e4a447 1-3
+apps/docs/utils/docs.ts
+  s_1f372f23d4aeb6::t_091d78f8190e06 5,26,28,87,97,104,111,118,125
+  s_1f372f23d4aeb6::t_cd16474fda21cb 20,91,98,105,112,119,133,140
+  s_1f372f23d4aeb6::t_ca25d6e62bf024 126
+apps/docs/utils/headings.ts
+  s_1f372f23d4aeb6::t_a2e915b5204096 1-9,13-27
+  s_1f372f23d4aeb6::t_091d78f8190e06 10-12
+packages/web-dev-ui/src/rider-kick-logo.tsx
+  s_1f372f23d4aeb6::t_470f2c70b17ce5 5,8
+apps/docs/content/index.md
+  s_1f372f23d4aeb6::t_2236a3c5e4a447 1-6,15,20-23
+  s_1f372f23d4aeb6::t_f2ee5f573fe0e1 7-14,16-19
+packages/web-dev-ui/src/mdx/sandpack/SandpackRoot.tsx
+  s_1f372f23d4aeb6::t_4ff4fbac08706c 61-67,99,104
+apps/docs/content/components/site-header.md
+  s_1f372f23d4aeb6::t_470f2c70b17ce5 36
+  s_1f372f23d4aeb6::t_ca11845d05cc51 8-10,14-25
+  s_1f372f23d4aeb6::t_2236a3c5e4a447 2-4,6-7,11-13,26-30,32-33,35,37-42
+  s_1f372f23d4aeb6::t_f2ee5f573fe0e1 1,5,31
+apps/docs/components/MdxComponentGallery.tsx
+  s_1f372f23d4aeb6::t_d2d4b3f2c3cb29 29-30,168-169,173,178,214,217-220,239,260,274-275,278,287-288,292,308
+  s_1f372f23d4aeb6::t_01f0cfcd3f084b 96
+apps/docs/utils/server-paths.ts
+  s_1f372f23d4aeb6::t_cd16474fda21cb 1-3
+apps/docs/components/Layout/Page.tsx
+  s_1f372f23d4aeb6::t_ca25d6e62bf024 80
+  s_1f372f23d4aeb6::t_72603667b5dfd5 2-4,24-25,30-31,84
+packages/web-dev-ui/src/card.tsx
+  s_1f372f23d4aeb6::t_7dec6b32535d57 7,15-20,22-29
+  s_1f372f23d4aeb6::t_359e11bf663636 10-14,35-39,47
+apps/docs/content/components/code.md
+  s_1f372f23d4aeb6::t_f2ee5f573fe0e1 1,5,25
+  s_1f372f23d4aeb6::t_2236a3c5e4a447 2-4,6-7,11-15,17,19-24,26-30
+  s_1f372f23d4aeb6::t_ca11845d05cc51 8-10,16,18
+packages/web-dev-ui/src/styles.css
+  s_1f372f23d4aeb6::t_0781b99dc7142d 931-940
+  s_1f372f23d4aeb6::t_6b84dafe1ebb08 1062,1072-1091,1133-1140,1452
+  s_1f372f23d4aeb6::t_7dec6b32535d57 155-161
+  s_1f372f23d4aeb6::t_470f2c70b17ce5 1548
+  s_1f372f23d4aeb6::t_60e7bad2723573 314,319,323
+  s_1f372f23d4aeb6::t_e5851fec778532 645-646,658,1051-1061,1063-1071,1092-1132,1141-1146
+  s_1f372f23d4aeb6::t_33151b60dcdd22 669-672,836-837,905,1454,1476-1477,1479,1491-1492,1497-1498,1504-1505,1512-1513
+  s_1f372f23d4aeb6::t_93e5640c6241b5 873
+  s_1f372f23d4aeb6::t_0adadb3e6a4bea 388-422
+apps/docs/content/components/button.md
+  s_1f372f23d4aeb6::t_2236a3c5e4a447 2-4,6-7,11-14,19,21-26,28-34
+  s_1f372f23d4aeb6::t_f2ee5f573fe0e1 1,5,27
+  s_1f372f23d4aeb6::t_ca11845d05cc51 8-10,15-18,20
+apps/docs/components/Layout/Toc.tsx
+  s_1f372f23d4aeb6::t_e1c3bb4f8e09cf 1
+apps/docs/content/components/card.md
+  s_1f372f23d4aeb6::t_ca11845d05cc51 8-10,15,18-19,22,25-26
+  s_1f372f23d4aeb6::t_2236a3c5e4a447 2-4,6-7,11-13,16,23-24,27-31,33-38
+  s_1f372f23d4aeb6::t_f2ee5f573fe0e1 1,5,17,20,32
+packages/web-dev-ui/package.json
+  s_1f372f23d4aeb6::t_470f2c70b17ce5 20
+apps/docs/components/Layout/Footer.tsx
+  s_1f372f23d4aeb6::t_e1c3bb4f8e09cf 2
+apps/docs/components/Layout/useTocHighlight.ts
+  s_1f372f23d4aeb6::t_e1c3bb4f8e09cf 2
+  s_1f372f23d4aeb6::t_89415f8437d41e 5,40
+apps/docs/content/patterns/publishing.md
+  s_1f372f23d4aeb6::t_2236a3c5e4a447 1-3
+packages/web-dev-ui/src/mdx/sandpack/Console.tsx
+  s_1f372f23d4aeb6::t_0781b99dc7142d 118,135-137,139-157
+apps/docs/utils/routes.ts
+  s_1f372f23d4aeb6::t_72603667b5dfd5 1
+apps/docs/content/components/mdx.md
+  s_1f372f23d4aeb6::t_ca25d6e62bf024 1
+apps/docs/utils/markdown.ts
+  s_1f372f23d4aeb6::t_4c49e95f7402e4 12,25-39
+  s_1f372f23d4aeb6::t_cd16474fda21cb 1-4,6-11,13-24,40
+  s_1f372f23d4aeb6::t_a2e915b5204096 5
+apps/docs/pages/[[...markdownPath]].tsx
+  s_1f372f23d4aeb6::t_72603667b5dfd5 3,5,10-11,16-22,29-37,58,64-65
+  s_1f372f23d4aeb6::t_ca25d6e62bf024 4,59
+apps/docs/components/MarkdownDoc.tsx
+  s_1f372f23d4aeb6::t_b7804c78efbde5 185,208-214
+  s_1f372f23d4aeb6::t_60e7bad2723573 223
+  s_1f372f23d4aeb6::t_ca25d6e62bf024 11,17,70-75,162-168
+  s_1f372f23d4aeb6::t_0adadb3e6a4bea 94-95
+  s_1f372f23d4aeb6::t_efc74c0d07156b 2-10,40,65,67-69,229,231
+  s_1f372f23d4aeb6::t_cd16474fda21cb 1,13-16,18-39,41-64,66,76-84,86-93,96-161,169-184,186-207,215-222,224-228,230,232-269,384
+  s_1f372f23d4aeb6::t_a2e915b5204096 12
+  s_1f372f23d4aeb6::t_ca11845d05cc51 85,385-541
+  s_1f372f23d4aeb6::t_03703d43fb2e36 270-366
+  s_1f372f23d4aeb6::t_89ac4ec50bcb2e 367-383
+apps/web/components/ProjectCard.tsx
+  s_1f372f23d4aeb6::t_7dec6b32535d57 19,93-96
+apps/web/sections/ProjectSection.tsx
+  s_1f372f23d4aeb6::t_e1c3bb4f8e09cf 91
+  s_1f372f23d4aeb6::t_7dec6b32535d57 77-78,81-82,85-87
+apps/docs/components/Layout/SidebarNav.tsx
+  s_1f372f23d4aeb6::t_e1c3bb4f8e09cf 4
+apps/docs/styles.css
+  s_1f372f23d4aeb6::t_359e11bf663636 193-201,203-219
+  s_1f372f23d4aeb6::t_33151b60dcdd22 187
+  s_1f372f23d4aeb6::t_60e7bad2723573 202,220,227
+apps/docs/components/Layout/TopNav.tsx
+  s_1f372f23d4aeb6::t_091d78f8190e06 6-7,24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.33-trip",
+  "base_commit_sha": "4e8f5f2b326115ff38530fb37731f8c239bfbdde",
+  "prompts": {},
+  "sessions": {
+    "s_1f372f23d4aeb6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f5ab7-44f0-7733-a03e-1031673b58f2",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
