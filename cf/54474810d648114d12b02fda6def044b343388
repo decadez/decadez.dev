@@ -1,0 +1,38 @@
+apps/web/styles/globals.css
+  s_dcbacc8b5edbb2::t_f74363c53a0695 4
+  s_dcbacc8b5edbb2::t_c94f684575462f 1
+  s_dcbacc8b5edbb2::t_eb1cd2ca88f7ac 12,23-27,32-36,41-45
+packages/web-dev-ui/src/styles.css
+  s_dcbacc8b5edbb2::t_eb1cd2ca88f7ac 14
+  s_dcbacc8b5edbb2::t_c94f684575462f 1-13,15-36
+AGENTS.md
+  s_dcbacc8b5edbb2::t_4185ebdf7decea 20
+  s_dcbacc8b5edbb2::t_65696f99f25e90 15-19,21-135
+apps/docs/content/components/site-header.md
+  s_1f372f23d4aeb6::t_ca11845d05cc51 14-23
+  s_1f372f23d4aeb6::t_2236a3c5e4a447 13,24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.33-trip",
+  "base_commit_sha": "cf54474810d648114d12b02fda6def044b343388",
+  "prompts": {},
+  "sessions": {
+    "s_1f372f23d4aeb6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f5ab7-44f0-7733-a03e-1031673b58f2",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    },
+    "s_dcbacc8b5edbb2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f5b83-a842-7d92-b8dd-755b80192678",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
