@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactElement } from "react";
+import { Badge, Card } from "@decadez/web-dev-ui";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -88,7 +89,7 @@ const ProjectCard: React.FC<Props> = ({ index, project }) => {
 
   return (
     <div ref={sectionRef} className={`md:basis-1/2 md:px-8 py-2 md:py-4`}>
-      <div className={`project-card project-card-${index}`}>
+      <Card className={`project-card project-card-${index}`}>
         <div className="overflow-hidden">
           <div
             className={`project-image ${project.bgColor} relative aspect-[16/9]`}
@@ -179,15 +180,12 @@ const ProjectCard: React.FC<Props> = ({ index, project }) => {
           className={`flex flex-wrap mt-2 mb-4 md:mt-2 md:mb-6 text-sm overflow-hidden`}
         >
           {project.tags.map((tag) => (
-            <li
-              key={tag}
-              className={`project-tags mr-2 my-1 bg-blogmist dark:bg-carddark py-1 px-2 rounded`}
-            >
-              {tag}
+            <li key={tag} className="project-tags mr-2 my-1">
+              <Badge>{tag}</Badge>
             </li>
           ))}
         </ul>
-      </div>
+      </Card>
     </div>
   );
 };

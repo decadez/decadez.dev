@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { useTheme } from "next-themes";
+import { Card } from "@decadez/web-dev-ui";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -92,15 +93,12 @@ const AboutSection: React.FC = () => {
 
           <div className="focus-grid grid md:grid-cols-3 gap-4 mt-10">
             {focusAreas.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-md bg-bglight dark:bg-carddark p-5 shadow-sm"
-              >
+              <Card key={item.title} className="bg-bglight p-5">
                 <h3 className="text-marrsgreen dark:text-carrigreen font-medium text-lg">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-6">{item.description}</p>
-              </div>
+              </Card>
             ))}
           </div>
         </RoughNotationGroup>
