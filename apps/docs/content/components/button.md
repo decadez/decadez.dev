@@ -26,9 +26,9 @@ export default function App() {
 
 ## API
 
-| Prop | Type | Default | Description |
-| --- | --- | --- | --- |
-| `children` | `ReactNode` | - | Button label or custom inline content. |
-| `variant` | `"solid" \| "outline" \| "ghost"` | `"solid"` | Visual emphasis of the button. |
-| `size` | `"sm" \| "md"` | `"md"` | Control height and text scale. |
-| `href` | `string` | - | `LinkButton` destination URL. |
+| Prop       | Type                              | Default   | Description                            |
+| ---------- | --------------------------------- | --------- | -------------------------------------- |
+| `children` | `ReactNode`                       | -         | Button label or custom inline content. |
+| `variant`  | `"solid" \| "outline" \| "ghost"` | `"solid"` | Visual emphasis of the button.         |
+| `size`     | `"sm" \| "md"`                    | `"md"`    | Control height and text scale.         |
+| `href`     | `string`                          | -         | `LinkButton` destination URL.          |

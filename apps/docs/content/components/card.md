@@ -31,8 +31,8 @@ export default function App() {
 
 ## API
 
-| Prop | Type | Default | Description |
-| --- | --- | --- | --- |
-| `children` | `ReactNode` | - | Card content. |
-| `variant` | `"default" \| "plain"` | `"default"` | `plain` removes the border, fill, and shadow. |
-| `className` | `string` | - | Additional class names for layout and spacing. |
+| Prop        | Type                   | Default     | Description                                    |
+| ----------- | ---------------------- | ----------- | ---------------------------------------------- |
+| `children`  | `ReactNode`            | -           | Card content.                                  |
+| `variant`   | `"default" \| "plain"` | `"default"` | `plain` removes the border, fill, and shadow.  |
+| `className` | `string`               | -           | Additional class names for layout and spacing. |

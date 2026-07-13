@@ -78,7 +78,9 @@ const projects = [
     type: "Documentation",
     image: (
       <div className="h-full w-full p-6 flex flex-col justify-between">
-        <span className="text-sm uppercase tracking-widest">Component Docs</span>
+        <span className="text-sm uppercase tracking-widest">
+          Component Docs
+        </span>
         <strong className="text-4xl">UI</strong>
       </div>
     ),

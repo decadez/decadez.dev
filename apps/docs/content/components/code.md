@@ -24,7 +24,7 @@ export default function App() {
 
 ## API
 
-| Prop | Type | Default | Description |
-| --- | --- | --- | --- |
-| `children` | `ReactNode` | - | Inline code text or block code source. |
-| `className` | `string` | - | Additional class names for custom layout. |
+| Prop        | Type        | Default | Description                               |
+| ----------- | ----------- | ------- | ----------------------------------------- |
+| `children`  | `ReactNode` | -       | Inline code text or block code source.    |
+| `className` | `string`    | -       | Additional class names for custom layout. |
