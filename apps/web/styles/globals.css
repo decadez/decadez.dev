@@ -1,7 +1,7 @@
+@import "@decadez/web-dev-ui/styles.css";
 @config "../tailwind.config.js";
-@import "tailwindcss";
 
-@source "../../../packages/web-dev-ui/src/**/*.{ts,tsx}";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   html {
@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply font-sans;
+    font-family: var(--web-dev-ui-font-sans, "Jost", sans-serif);
   }
 
   /* ===== Custom Scrollbar ===== */
@@ -20,17 +20,29 @@
 
   /* Track */
   ::-webkit-scrollbar-track {
-    @apply bg-bglight dark:bg-bgdark;
+    background: #f9fafb;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: #1d2a35;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    @apply bg-[#d5d5d5] dark:bg-carddark;
+    background: #d5d5d5;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #22323f;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-[#b7b7b7] dark:bg-[#17222b];
+    background: #b7b7b7;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #17222b;
   }
 }
 

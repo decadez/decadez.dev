@@ -10,20 +10,18 @@ import "@decadez/web-dev-ui/styles.css";
 
 export default function App() {
   return (
-    <main className="demo">
-      <SiteHeader
-        brandHref="#"
-        brandLabel="decadez"
-        brandAccent=".dev"
-        navLinks={[
-          { url: "#projects", text: "Projects" },
-          { url: "#blog", text: "Blog" },
-          { url: "#contact", text: "Contact" },
-        ]}
-        currentSection="projects"
-        theme="light"
-      />
-    </main>
+    <SiteHeader
+      brandHref="#"
+      brandLabel="decadez"
+      brandAccent=".dev"
+      navLinks={[
+        { url: "#projects", text: "Projects" },
+        { url: "#blog", text: "Blog" },
+        { url: "#contact", text: "Contact" },
+      ]}
+      currentSection="projects"
+      theme="light"
+    />
   );
 }
 ```
