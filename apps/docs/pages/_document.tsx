@@ -18,9 +18,18 @@ const themeScript = `
 `;
 
 export default function Document() {
+  const basePath = process.env.GITHUB_PAGES === "true" ? "/decadez.dev/ui" : "";
+
   return (
     <Html lang="en">
       <Head>
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href={`${basePath}/favicon.svg`}
+        />
+        <link rel="shortcut icon" href={`${basePath}/favicon.svg`} />
+        <link rel="apple-touch-icon" href={`${basePath}/favicon.svg`} />
         <meta name="theme-color" content="#f9fafb" />
       </Head>
       <body>
