@@ -1,0 +1,34 @@
+packages/web-dev-ui/src/styles.css
+  s_bd0deaeb1a7f57::t_8443f5c79201a1 534,536-537,541-543,547,551,587-596
+  s_bd0deaeb1a7f57::t_0f801c5733e7a5 531-533,535,538-540,544-546,548-550,552-586,597-656
+  s_bd0deaeb1a7f57::t_1f842496e2a512 312-501
+apps/docs/components/MarkdownDoc.tsx
+  s_bd0deaeb1a7f57::t_405ea9b8b3a4e6 282-283,285-291,294-295,297,299-300,302-310,312-313,315-330,334-336,338-341,343,345-386
+  s_bd0deaeb1a7f57::t_96cb91c0f03614 284,296,298,301,311,314,342,344
+  s_bd0deaeb1a7f57::t_9fdf380d671188 90,97-98
+  s_bd0deaeb1a7f57::t_339ecadd12e2cb 91-96
+  s_bd0deaeb1a7f57::t_96941a85f20a98 277-281,292-293,331-333,337
+packages/web-dev-ui/src/mdx/sandpack/Console.tsx
+  s_bd0deaeb1a7f57::t_ef05251e6bb183 118,135-147,149
+packages/web-dev-ui/src/mdx/index.ts
+  s_bd0deaeb1a7f57::t_52df8ff78c129e 2
+packages/web-dev-ui/src/mdx/code-block.tsx
+  s_bd0deaeb1a7f57::t_b62a3379774ef7 1-35,37-45,51-52,54,56-59,61,63-67,70-73,75-297,299-401
+  s_bd0deaeb1a7f57::t_123f2273cb76f3 36,46-50,53,55,60,62,68-69,74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.34-trip",
+  "base_commit_sha": "47ebac46a0e78287e3184c7630aeef6797995c15",
+  "prompts": {},
+  "sessions": {
+    "s_bd0deaeb1a7f57": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f7049-fffc-7cd2-88f8-9f6599a73363",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
