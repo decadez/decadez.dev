@@ -115,7 +115,7 @@ export const SandpackConsole = ({ visible }: { visible: boolean }) => {
     }
   }, [logs]);
 
-  if (!visible) {
+  if (!visible || logs.length === 0) {
     return null;
   }
 
@@ -132,29 +132,21 @@ export const SandpackConsole = ({ visible }: { visible: boolean }) => {
       </div>
       {isExpanded && (
         <div className="ui-sandpack-console-lines" ref={wrapperRef}>
-          {logs.length === 0 ? (
-            <div className="ui-sandpack-console-empty">
-              Console output will appear here.
+          {logs.map(({ data, id, method }) => (
+            <div
+              key={id}
+              className={cx(
+                "ui-sandpack-console-line",
+                `ui-sandpack-console-line--${getType(method)}`
+              )}
+            >
+              {data.map((msg, index) => (
+                <span key={index}>
+                  {typeof msg === "string" ? msg : JSON.stringify(msg, null, 2)}
+                </span>
+              ))}
             </div>
-          ) : (
-            logs.map(({ data, id, method }) => (
-              <div
-                key={id}
-                className={cx(
-                  "ui-sandpack-console-line",
-                  `ui-sandpack-console-line--${getType(method)}`
-                )}
-              >
-                {data.map((msg, index) => (
-                  <span key={index}>
-                    {typeof msg === "string"
-                      ? msg
-                      : JSON.stringify(msg, null, 2)}
-                  </span>
-                ))}
-              </div>
-            ))
-          )}
+          ))}
         </div>
       )}
     </div>

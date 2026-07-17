@@ -87,7 +87,15 @@ function renderToken(token: Token, index: number) {
         );
       }
 
-      return <CodeBlock key={index}>{token.code}</CodeBlock>;
+      return (
+        <CodeBlock
+          key={index}
+          className={`language-${token.language || "js"}`}
+          meta={token.meta}
+        >
+          {token.code}
+        </CodeBlock>
+      );
     case "table":
       return (
         <div key={index} className="ui-mdx-table-wrap">
@@ -266,4 +274,114 @@ const sandboxStyles = `.demo {
 
 .demo-card p {
   line-height: 1.6;
+}
+
+.main-nav {
+  position: relative !important;
+  inset: auto !important;
+  z-index: 1;
+  width: min(100%, 44rem);
+  height: auto !important;
+  min-height: 4rem;
+  padding: 0 1rem;
+  border: 1px solid rgb(143 121 217 / 0.16);
+  border-radius: 12px;
+  background: rgb(249 250 251 / 0.92);
+  box-shadow: 0 14px 34px rgb(29 42 53 / 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.main-nav > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 4rem;
+  padding: 12px 0;
+}
+
+.main-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-nav > div > a {
+  display: inline-flex;
+  flex: 1 1 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #1d2a35;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.main-nav > div > a span span {
+  color: #8f79d9;
+}
+
+.main-nav nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.site-header-nav-menu {
+  position: static !important;
+  width: auto !important;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none !important;
+}
+
+.site-header-nav-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header-nav-link {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  color: #1d2a35;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.site-header-nav-link:hover {
+  color: #8f79d9;
+}
+
+.site-header-nav-icon {
+  display: none;
+}
+
+.main-nav button {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #1d2a35;
+  cursor: pointer;
+}
+
+.main-nav button svg:first-child {
+  display: none;
+}
+
+.main-nav button svg:last-child {
+  display: inline-block;
 }`.trim();
