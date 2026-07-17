@@ -117,4 +117,3 @@ export const H5 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 
 export const InlineCode = MDXInlineCode;
 export const Link = MDXLink;
-export const CodeBlock = MDXPre;
