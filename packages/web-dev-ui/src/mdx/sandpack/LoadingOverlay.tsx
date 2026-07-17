@@ -46,7 +46,19 @@ export const LoadingOverlay = ({
         transition: `opacity ${fadeAnimationDuration}ms ease-out`,
       }}
     >
-      <div className="sp-cube-wrapper" title="Loading sandbox">
+      <SandpackLoadingIndicator />
+    </div>
+  );
+};
+
+export function SandpackLoadingIndicator() {
+  return (
+    <div
+      className="ui-sandpack-loading-state"
+      role="status"
+      aria-label="Loading sandbox"
+    >
+      <div className="sp-cube-wrapper" aria-hidden="true">
         <div className="sp-cube">
           <div className="sp-sides">
             <div className="top" />
@@ -58,9 +70,10 @@ export const LoadingOverlay = ({
           </div>
         </div>
       </div>
+      <span>Loading sandbox</span>
     </div>
   );
-};
+}
 
 const useLoadingOverlayState = (
   clientId: string,

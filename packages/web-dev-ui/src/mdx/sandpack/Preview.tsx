@@ -223,14 +223,18 @@ function LivePreview({
               <ErrorMessage error={error} />
             </div>
           )}
+          <LoadingOverlay
+            clientId={clientId}
+            dependenciesLoading={
+              !bundlerIsReady && iframeComputedHeight === null
+            }
+            forceLoading={
+              showLoading || (!bundlerIsReady && iframeComputedHeight === null)
+            }
+          />
         </div>
       </SandpackStack>
       <SandpackConsole visible={!error} />
-      <LoadingOverlay
-        clientId={clientId}
-        dependenciesLoading={!bundlerIsReady && iframeComputedHeight === null}
-        forceLoading={showLoading}
-      />
     </>
   );
 }

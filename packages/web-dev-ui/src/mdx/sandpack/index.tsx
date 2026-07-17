@@ -5,6 +5,7 @@ import type {
   SandpackSetup,
 } from "@codesandbox/sandpack-react/unstyled";
 import { AppJSPath, createFileMap } from "./createFileMap";
+import { SandpackLoadingIndicator } from "./LoadingOverlay";
 
 const SandpackRoot = lazy(() => import("./SandpackRoot"));
 const SandpackRSCRoot = lazy(() => import("./SandpackRSCRoot"));
@@ -21,7 +22,9 @@ const SandpackGlimmer = ({ code }: { code: string }) => (
           <div className="sp-stack sp-editor">
             <pre className="sp-pre-placeholder">{code}</pre>
           </div>
-          <div className="sp-stack ui-sandpack-preview-panel" />
+          <div className="sp-stack ui-sandpack-preview-panel">
+            <SandpackLoadingIndicator />
+          </div>
           {code.split("\n").length > 16 && <div className="sandpack-expand" />}
         </div>
       </div>

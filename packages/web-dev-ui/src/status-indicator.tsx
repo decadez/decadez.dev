@@ -18,13 +18,13 @@ export function StatusIndicator({
 
   return (
     <span
-      className={`ml-2 hidden md:inline-flex items-center gap-1.5 text-xs text-bgdark/70 dark:text-bglight/75 ${className}`}
+      className={`ui-status-indicator ${className}`}
       title={text}
       aria-label={text}
     >
       <span
-        className={`h-2 w-2 rounded-full ${
-          isOk ? "bg-green-500" : "bg-gray-400"
+        className={`ui-status-indicator__dot ${
+          isOk ? "is-ok" : "is-unavailable"
         }`}
       />
       {showText && <span>{text}</span>}
