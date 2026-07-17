@@ -1,0 +1,23 @@
+apps/docs/pages/_document.tsx
+  s_bd0deaeb1a7f57::t_a3144e8205349f 21-22,26-32
+apps/docs/public/favicon.svg
+  s_bd0deaeb1a7f57::t_8fbe0391bfa64c 1-9
+packages/web-dev-ui/package.json
+  s_bd0deaeb1a7f57::t_8dfd4eb2917a16 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.34-trip",
+  "base_commit_sha": "d78c93bb4560bb1c201f48ad3c09890a6f3a6432",
+  "prompts": {},
+  "sessions": {
+    "s_bd0deaeb1a7f57": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f7049-fffc-7cd2-88f8-9f6599a73363",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
