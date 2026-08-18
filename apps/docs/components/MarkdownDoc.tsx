@@ -10,6 +10,7 @@ import {
 } from "@decadez/web-dev-ui/mdx";
 import { MdxComponentGallery } from "./MdxComponentGallery";
 import { getHeadingId } from "@/utils/headings";
+import { getSandboxAppFile } from "@/utils/sandbox";
 
 type Token =
   | { type: "heading"; depth: 2 | 3; text: string }
@@ -75,12 +76,13 @@ function renderToken(token: Token, index: number) {
       return null;
     case "code":
       if (token.meta.includes("sandbox")) {
+        const appFile = getSandboxAppFile(token.language);
         return (
           <MDXSandbox
             key={index}
-            activeFile="/src/App.js"
+            activeFile={appFile}
             files={{
-              "/src/App.js": token.code,
+              [appFile]: token.code,
               "/src/styles.css": sandboxStyles,
             }}
           />
