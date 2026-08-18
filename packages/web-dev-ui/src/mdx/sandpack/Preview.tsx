@@ -24,6 +24,37 @@ type CustomPreviewProps = {
   preview?: ReactNode;
 };
 
+type SandpackPreviewError = {
+  title?: string;
+  message: string;
+} | null;
+
+export function shouldShowSandpackConsole(_error: SandpackPreviewError) {
+  return true;
+}
+
+export function shouldHideSandpackPreview({
+  bundlerIsReady,
+  currentError,
+  displayedError,
+  iframeComputedHeight,
+  previewIsSettled,
+}: {
+  bundlerIsReady: boolean;
+  currentError: SandpackPreviewError;
+  displayedError: SandpackPreviewError;
+  iframeComputedHeight: number | null;
+  previewIsSettled: boolean;
+}) {
+  return (
+    currentError !== null ||
+    displayedError !== null ||
+    iframeComputedHeight === null ||
+    !bundlerIsReady ||
+    !previewIsSettled
+  );
+}
+
 function useDebounced<T>(value: T): T {
   const ref = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [saved, setSaved] = useState(value);
@@ -123,6 +154,12 @@ function LivePreview({
   }
 
   const error = useDebounced(rawError);
+  const previewCanBeShown =
+    rawError === null &&
+    error === null &&
+    iframeComputedHeight !== null &&
+    bundlerIsReady;
+  const previewIsSettled = useDebounced(previewCanBeShown);
   const clientId = useId();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const sandpackIdle = sandpack.status === "idle";
@@ -173,7 +210,13 @@ function LivePreview({
     [listen, clientId, sandpackIdle]
   );
 
-  const hideContent = error || !iframeComputedHeight || !bundlerIsReady;
+  const hideContent = shouldHideSandpackPreview({
+    bundlerIsReady,
+    currentError: rawError,
+    displayedError: error,
+    iframeComputedHeight,
+    previewIsSettled,
+  });
 
   const iframeWrapperPosition = (): CSSProperties => {
     if (hideContent) {
@@ -234,7 +277,7 @@ function LivePreview({
           />
         </div>
       </SandpackStack>
-      <SandpackConsole visible={!error} />
+      <SandpackConsole visible={shouldShowSandpackConsole(error)} />
     </>
   );
 }

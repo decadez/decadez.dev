@@ -29,9 +29,12 @@ root.render(
         },
         dependencies: {
           "@decadez/web-dev-ui": "latest",
+          "@types/react": "^19.2.17",
+          "@types/react-dom": "^19.2.3",
           react: "^19.2.7",
           "react-dom": "^19.2.7",
           "react-scripts": "^5.0.0",
+          typescript: "^4.9.5",
         },
       },
       null,
