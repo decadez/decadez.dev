@@ -1,0 +1,29 @@
+apps/docs/utils/sandbox.ts
+  s_8ffe09582b2406::t_e5ee97c54a76a3 1-11
+apps/docs/components/MarkdownDoc.tsx
+  s_8ffe09582b2406::t_e5ee97c54a76a3 13,79,83,85
+packages/web-dev-ui/src/mdx/sandpack/template.ts
+  s_8ffe09582b2406::t_8578d8635a33e9 32-33
+  s_8ffe09582b2406::t_e5ee97c54a76a3 37
+packages/web-dev-ui/src/mdx/sandpack/Preview.tsx
+  s_8ffe09582b2406::t_4e148716bcaed0 36-57,157-162,213-219
+  s_8ffe09582b2406::t_e5ee97c54a76a3 27-35,280
+apps/docs/next-env.d.ts
+  s_8ffe09582b2406::t_4d99f9037f6665 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.40-trip",
+  "base_commit_sha": "7a7f4f5c3d1b176f2d46e3d6f0a210e5d899d421",
+  "prompts": {},
+  "sessions": {
+    "s_8ffe09582b2406": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a014cd-57f8-7d33-b6ac-432127b6e5ff",
+        "model": "gpt-5.5-2026-04-24"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
