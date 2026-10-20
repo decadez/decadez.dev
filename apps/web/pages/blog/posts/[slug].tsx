@@ -8,7 +8,10 @@ import SkipToMain from "@/components/SkipToMain";
 import SocialLinks from "@/components/SocialLinks";
 import AppHead, { Meta } from "@/components/AppHead";
 import Footer from "@/components/Footer";
-import markdownToHtml from "utils/markdownToHtml";
+import { compilePostMarkdown } from "utils/markdownToHtml";
+import type { TocItem, RouteItem } from "utils/post-navigation";
+import { Toc } from "@/components/blog/navigation/Toc";
+import { DocsFooter } from "@/components/blog/navigation/Footer";
 import { getAllPosts, getPostBySlug } from "utils/api";
 import PostBody from "@/components/blog/PostBody";
 import Tag from "@/components/blog/Tag";
@@ -32,9 +35,12 @@ export interface MdxMeta extends Meta {
 
 type Props = {
   post: MdxMeta;
+  toc: TocItem[];
+  prevRoute: RouteItem | null;
+  nextRoute: RouteItem | null;
 };
 
-const BlogLayout: React.FC<Props> = ({ post }) => {
+const BlogLayout: React.FC<Props> = ({ post, toc, prevRoute, nextRoute }) => {
   const { theme } = useTheme();
   const postUrl = `${process.env.NEXT_PUBLIC_URL}/blog/posts/${post.slug}`;
   return (
@@ -59,7 +65,7 @@ const BlogLayout: React.FC<Props> = ({ post }) => {
           <SkipToMain />
           <BlogHeader />
           <SocialLinks />
-          <main id="main" className="blog-main">
+          <main id="main" className="blog-main post-navigation-layout">
             <article className="blog-section">
               <h1 className="font-semibold md:font-bold text-3xl md:text-4xl">
                 {post.title}
@@ -89,6 +95,9 @@ const BlogLayout: React.FC<Props> = ({ post }) => {
                 </div>
               )}
               <PostBody content={post.content} />
+              {(prevRoute || nextRoute) && (
+                <DocsFooter prevRoute={prevRoute} nextRoute={nextRoute} />
+              )}
 
               {/* <hr /> */}
 
@@ -120,6 +129,7 @@ const BlogLayout: React.FC<Props> = ({ post }) => {
                 </a>
               </div>
             </article>
+            <Toc headings={toc} />
           </main>
           <Footer />
         </div>
@@ -145,10 +155,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     "tags",
     "type",
   ]);
-  const content = await markdownToHtml((post.content as string) || "");
+  const { content, toc } = await compilePostMarkdown(
+    (post.content as string) || ""
+  );
+  const posts = getAllPosts(["slug", "title", "datetime"]);
+  const index = posts.findIndex((item) => item.slug === post.slug);
+  const route = (item: (typeof posts)[number] | undefined): RouteItem | null =>
+    item
+      ? { path: `/blog/posts/${item.slug}`, title: item.title as string }
+      : null;
 
   return {
     props: {
+      toc,
+      prevRoute: index > 0 ? route(posts[index - 1]) : null,
+      nextRoute: index >= 0 ? route(posts[index + 1]) : null,
       post: {
         ...post,
         content,
