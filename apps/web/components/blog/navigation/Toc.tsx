@@ -14,6 +14,7 @@ export function Toc({ headings }: { headings: TocItem[] }) {
             <a
               key={item.url}
               href={item.url}
+              data-depth={item.depth}
               aria-current={selectedIndex === index ? "location" : undefined}
               className={selectedIndex === index ? "docs-toc-active" : ""}
             >

@@ -300,6 +300,19 @@
   text-decoration: none;
   font-size: 0.875rem;
 }
+.post-navigation-layout .docs-toc a[data-depth="2"] {
+  font-weight: 600;
+}
+.post-navigation-layout .docs-toc a[data-depth="3"] {
+  margin-left: 1rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid rgb(143 121 217 / 0.25);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.8125rem;
+}
+.dark .post-navigation-layout .docs-toc a[data-depth="3"] {
+  border-left-color: rgb(227 201 250 / 0.25);
+}
 @media (min-width: 768px) {
   .post-navigation-layout .docs-pager {
     grid-template-columns: 1fr 1fr;
