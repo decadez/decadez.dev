@@ -1,7 +1,5 @@
 import Image from "next/image";
-import Script from "next/script";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { useTheme } from "next-themes";
 
 import BlogHeader from "@/components/blog/BlogHeader";
 import SkipToMain from "@/components/SkipToMain";
@@ -17,6 +15,7 @@ import PostBody from "@/components/blog/PostBody";
 import Tag from "@/components/blog/Tag";
 import DateTime from "@/components/DateTime";
 import HeadCategory from "@/components/blog/HeadCategory";
+import SharePost from "@/components/blog/SharePost";
 
 export interface MdxMeta extends Meta {
   title: string;
@@ -41,23 +40,12 @@ type Props = {
 };
 
 const BlogLayout: React.FC<Props> = ({ post, toc, prevRoute, nextRoute }) => {
-  const { theme } = useTheme();
-  const postUrl = `${process.env.NEXT_PUBLIC_URL}/blog/posts/${post.slug}`;
+  const postUrl = `${(process.env.NEXT_PUBLIC_URL || "https://decadez.github.io/decadez.dev").replace(/\/$/, "")}/blog/posts/${post.slug}/`;
   return (
     <>
-      {/* Facebook Plugin for comment & share */}
-      <div id="fb-root"></div>
-      <Script
-        async
-        defer
-        crossOrigin="anonymous"
-        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0&appId=3098460656840262&autoLogAppEvents=1"
-        nonce="BwXXZ73U"
-      />
-
       <AppHead
         title={`${post.title} - decadez.dev`}
-        url={`${process.env.NEXT_PUBLIC_URL}/blog/posts/${post.slug}`}
+        url={postUrl}
         meta={post}
       />
       <div className="blog-page">
@@ -95,39 +83,10 @@ const BlogLayout: React.FC<Props> = ({ post, toc, prevRoute, nextRoute }) => {
                 </div>
               )}
               <PostBody content={post.content} />
+              <SharePost title={post.title} url={postUrl} />
               {(prevRoute || nextRoute) && (
                 <DocsFooter prevRoute={prevRoute} nextRoute={nextRoute} />
               )}
-
-              {/* <hr /> */}
-
-              {/* Facebook Comment Plugin */}
-              {/* <div
-                className="fb-comments my-4"
-                data-colorscheme="dark"
-                data-href={postUrl}
-                data-width="100%"
-                data-numposts="5"
-              ></div> */}
-
-              {/* Facebook Share Button */}
-              <div
-                className="fb-share-button my-4"
-                data-href={postUrl}
-                data-layout="button"
-                data-size="large"
-              >
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                    postUrl
-                  )}&amp;src=sdkpreparse`}
-                  className="fb-xfbml-parse-ignore"
-                >
-                  Share
-                </a>
-              </div>
             </article>
             <Toc headings={toc} />
           </main>
