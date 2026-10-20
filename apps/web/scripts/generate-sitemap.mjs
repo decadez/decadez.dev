@@ -13,7 +13,7 @@ const slugify = (value) =>
     .toLowerCase()
     .replace(/\s+/g, "-")
     .replace(/&/g, "-and-")
-    .replace(/[^\w\-]+/g, "")
+    .replace(/[^\p{L}\p{N}_\-]+/gu, "")
     .replace(/\-\-+/g, "-")
     .replace(/^-+/, "")
     .replace(/-+$/, "");
