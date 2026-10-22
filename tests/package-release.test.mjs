@@ -70,10 +70,96 @@ test("only changed package files count, including removals, docs and assets", ()
 });
 
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+import {
+  chmodSync,
+  mkdtempSync,
+  mkdirSync,
+  writeFileSync,
+  rmSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { prepare } from "../scripts/package-release.mjs";
+
+test("persists a manually bumped release without an empty commit", () => {
+  const temporary = mkdtempSync(join(tmpdir(), "decadez-release-persist-"));
+  const directory = join(temporary, "work");
+  const remote = join(temporary, "remote.git");
+  const previous = process.cwd();
+  const previousPath = process.env.PATH;
+  const git = (...args) =>
+    execFileSync("git", ["-c", "core.hooksPath=/dev/null", ...args], {
+      cwd: directory,
+      encoding: "utf8",
+    }).trim();
+  const manifest = (version) =>
+    JSON.stringify({ name: "@decadez/ui", version }, null, 2) + "\n";
+  try {
+    mkdirSync(join(directory, "packages/ui"), { recursive: true });
+    mkdirSync(join(temporary, "bin"));
+    // Formatting/lockfile commands leave this already-normalized fixture intact.
+    const pnpm = join(temporary, "bin/pnpm");
+    writeFileSync(pnpm, "#!/bin/sh\nexit 0\n");
+    chmodSync(pnpm, 0o755);
+    process.env.PATH = `${join(temporary, "bin")}:${previousPath}`;
+    git("init", "--initial-branch=main");
+    git("config", "core.fsmonitor", "false");
+    git("config", "maintenance.auto", "false");
+    git("config", "user.name", "Test");
+    git("config", "user.email", "test@example.com");
+    git("init", "--bare", remote);
+    git("remote", "add", "origin", remote);
+    writeFileSync(
+      join(directory, "packages/ui/package.json"),
+      manifest("0.3.2")
+    );
+    writeFileSync(
+      join(directory, "pnpm-lock.yaml"),
+      "lockfileVersion: '9.0'\n"
+    );
+    git("add", ".");
+    git("commit", "-m", "chore: initial");
+    mkdirSync(join(directory, ".github/workflows"), { recursive: true });
+    writeFileSync(
+      join(directory, ".github/workflows/release-packages.yml"),
+      "on: push\n"
+    );
+    writeFileSync(
+      join(directory, "packages/ui/package.json"),
+      manifest("0.4.0")
+    );
+    writeFileSync(
+      join(directory, "packages/ui/button.ts"),
+      "export const button = 1;\n"
+    );
+    git("add", ".");
+    git("commit", "-m", "feat(ui)!: move sandbox and bump version");
+    const head = git("rev-parse", "HEAD");
+    process.chdir(directory);
+    const result = prepare({ registryCheck: () => true });
+    assert.equal(result.include[0].version, "0.4.0");
+    assert.equal(git("rev-parse", "HEAD"), head);
+    assert.equal(git("rev-parse", "ui-v0.4.0"), head);
+    assert.equal(
+      git("--git-dir", remote, "rev-parse", "refs/heads/main"),
+      head
+    );
+    assert.equal(
+      git("--git-dir", remote, "rev-parse", "refs/tags/ui-v0.4.0"),
+      head
+    );
+    assert.deepEqual(prepare({ registryCheck: () => true }).include, []);
+  } finally {
+    process.chdir(previous);
+    process.env.PATH = previousPath;
+    rmSync(temporary, {
+      recursive: true,
+      force: true,
+      maxRetries: 3,
+      retryDelay: 100,
+    });
+  }
+});
 
 test("git history covers independent package changes and unpublished retry", () => {
   const directory = mkdtempSync(join(tmpdir(), "decadez-release-"));

@@ -199,7 +199,10 @@ export function prepare({
       "pnpm-lock.yaml",
       ...bumped.map(({ directory }) => `${directory}/package.json`)
     );
-    git("commit", "-m", "chore(release): version changed packages");
+    // A manually bumped version can already satisfy the required release level.
+    // In that case tag the existing commit rather than creating an empty one.
+    if (git("diff", "--cached", "--name-only"))
+      git("commit", "-m", "chore(release): version changed packages");
     for (const { tag } of bumped) git("tag", tag);
     // Versions and tags reach the remote together, before the publish jobs start.
     git(
