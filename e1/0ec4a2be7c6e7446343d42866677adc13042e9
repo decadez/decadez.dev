@@ -1,0 +1,375 @@
+packages/web-dev-ui/src/animations/components/flower-cat/flower-cat.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-97
+packages/web-dev-ui/src/animations/components/like-hearts/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/stage-curtain/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/bookmark-panels/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+apps/docs/styles.css
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 537-566
+packages/web-dev-ui/src/animations/components/flower-cat/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+package.json
+  s_d7a352b3e5766b::t_371d3c5475d7c2 19
+  s_d7a352b3e5766b::t_bbf574b233d086 17
+packages/web-dev-ui/src/animations/components/loading-ripple/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/shutter/shutter.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/flip-panel/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+apps/docs/components/MdxComponentGallery.tsx
+  s_d7a352b3e5766b::t_1bba10095e90e7 2-5,185-188,257-258
+packages/web-dev-ui/src/animations/components/loading-word/loading-word.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/stacking-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/loading-wave/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/bouncing-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/walking-cat/walking-cat.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-72
+packages/web-dev-ui/src/animations/components/loading-ripple/loading-ripple.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/hooks/use-animation.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-22
+packages/web-dev-ui/package.json
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 16-32,37-39
+  s_d7a352b3e5766b::t_371d3c5475d7c2 42
+packages/web-dev-ui/src/animations/components/opening-transition/opening-transition.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/rotating-blocks/rotating-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/domino/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/diving-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+apps/docs/components/ExamplePreview.tsx
+  s_d7a352b3e5766b::t_1bba10095e90e7 82-95,97-100,102-104
+  s_d7a352b3e5766b::t_963bef90c4ff16 2,39,45,49-68,105-110,116-121
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 34-38,40-44,46,70,96,115
+packages/web-dev-ui/src/animations/components/clattering-panel/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/peel-paper/peel-paper.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/pop-ball/pop-ball.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/yarn/yarn.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-35
+packages/web-dev-ui/src/animations/components/loading-squares/loading-squares.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-92
+packages/web-dev-ui/src/animations/components/rattling-blocks/rattling-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/opening-transition/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+apps/docs/components/AnimationGallery.tsx
+  s_d7a352b3e5766b::t_963bef90c4ff16 1,10-11,13,16-26,56,93
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 2-9,27-55,57-92,94-97
+  s_d7a352b3e5766b::t_97657b25aa980c 12,14-15
+packages/web-dev-ui/src/animations/components/stacking-blocks/stacking-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-24
+packages/web-dev-ui/src/animations/components/loading-orbit/loading-orbit.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-89
+apps/docs/package.json
+  s_d7a352b3e5766b::t_963bef90c4ff16 7
+  s_d7a352b3e5766b::t_97657b25aa980c 6
+packages/web-dev-ui/src/animations/components/folding-panel/folding-panel.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-28
+packages/web-dev-ui/src/animations/components/bookmark-slide/bookmark-slide.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/bouncing-blocks/bouncing-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/loading-word/loading-word.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-93
+packages/web-dev-ui/src/animations/components/bookmark-slide/bookmark-slide.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-33
+packages/web-dev-ui/scripts/finalize-animations.mjs
+  s_d7a352b3e5766b::t_5fdc0aee616b70 19
+  s_d7a352b3e5766b::t_371d3c5475d7c2 1-18,20-37
+.github/workflows/publish-nest-infra.yml
+  s_d7a352b3e5766b::t_bbf574b233d086 17-19,21
+packages/web-dev-ui/src/animations/components/scribble/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/folding-panel/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/styled-system/create-animation.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-118
+packages/web-dev-ui/src/animations/components/bookmark-fold/bookmark-fold.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-39
+packages/web-dev-ui/src/animations/components/loading-gallery/loading-gallery.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/headphones/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/zipper-curtain/zipper-curtain.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/styled-system/provider.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-21
+packages/web-dev-ui/src/animations/theme/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-6
+packages/web-dev-ui/src/animations/components/headphones/headphones.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-24
+packages/web-dev-ui/src/animations/components/like-burst/like-burst.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/shutter/shutter.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-26
+packages/web-dev-ui/src/animations/components/opening-transition/opening-transition.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-33
+packages/web-dev-ui/src/animations/components/rotating-blocks/rotating-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-28
+packages/web-dev-ui/src/animations/components/download-bars/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/flip-blocks/flip-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-25
+packages/web-dev-ui/src/animations/components/stage-curtain/stage-curtain.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-23
+packages/web-dev-ui/src/animations/components/ripple/ripple.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/headphones/headphones.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/peel-paper/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/peel-paper/peel-paper.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-24
+packages/web-dev-ui/src/animations/components/scribble/scribble.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/scroll-unroll/scroll-unroll.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/scale-blocks/scale-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-37
+scripts/package-release.mjs
+  s_d7a352b3e5766b::t_bbf574b233d086 1-5,7-13,16-19,21-42,49-58,61-71,73-84,87-108,142-148,154-155,157-160,162-166,169-177,180-182,184,186,197-219,232-249
+  s_d7a352b3e5766b::t_91e88eac56fc82 14,20
+  s_d7a352b3e5766b::t_a4aa8cec866e64 47-48
+packages/web-dev-ui/src/animations/components/zipper-curtain/zipper-curtain.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-29
+packages/web-dev-ui/src/animations/hooks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1
+packages/web-dev-ui/src/animations/components/bookmark-fold/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/bookmark-panels/bookmark-panels.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-34
+packages/web-dev-ui/src/animations/components/loading-gallery/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/paint-lines/paint-lines.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/pop-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/rolling-box/rolling-box.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/yarn/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/README.md
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-23
+packages/web-dev-ui/src/animations/components/zipper-curtain/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/shutter/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/loading-wave/loading-wave.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/braking-box/braking-box.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-20
+packages/web-dev-ui/src/animations/components/scroll-unroll/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+.gitignore
+  s_d7a352b3e5766b::t_963bef90c4ff16 45
+packages/web-dev-ui/src/animations/components/rotating-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/loading-squares/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+.github/workflows/deploy-pages.yml
+  s_d7a352b3e5766b::t_bbf574b233d086 8-10,14-16,59
+  s_d7a352b3e5766b::t_9ee5335505250b 55-57
+apps/docs/content/components/animations.md
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-52
+apps/docs/content/patterns/publishing.md
+  s_d7a352b3e5766b::t_a4aa8cec866e64 9
+packages/web-dev-ui/src/animations/components/like-hearts/like-hearts.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+docs/plans/animations-integration.md
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-5
+  s_d7a352b3e5766b::t_c5b13b128397e1 6-7
+packages/web-dev-ui/src/animations/components/like-burst/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/scale-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/bouncing-blocks/bouncing-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-30
+packages/web-dev-ui/src/animations/components/flip-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/swap-blocks/swap-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-23
+packages/web-dev-ui/src/animations/components/pop-ball/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/walking-cat/walking-cat.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/pop-blocks/pop-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-23
+packages/web-dev-ui/src/animations/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-6
+apps/docs/scripts/animation-sources.mjs
+  s_d7a352b3e5766b::t_10122df64fc3a9 1,31-32,53-57
+  s_d7a352b3e5766b::t_acadb25d0446a8 41
+  s_d7a352b3e5766b::t_97657b25aa980c 4-5,14-16,29-30,34,36-40,43-47,50-52,58
+  s_d7a352b3e5766b::t_963bef90c4ff16 3,7-13,17,19-28
+tests/ui-animations.test.mjs
+  s_d7a352b3e5766b::t_371d3c5475d7c2 16-183
+  s_d7a352b3e5766b::t_ba8fc125c3e8e5 189-193,195-199,202-204,212-229
+  s_d7a352b3e5766b::t_4bbdc8c4eb7147 4,184-188,194,200-201,205-211
+packages/web-dev-ui/src/animations/components/flip-panel/flip-panel.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/like-hearts/like-hearts.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-133
+packages/web-dev-ui/src/animations/components/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-43
+packages/web-dev-ui/src/animations/components/loading-gallery/loading-gallery.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-355
+packages/web-dev-ui/src/animations/components/tissue/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/paint-lines/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/download-bars/download-bars.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-34
+packages/web-dev-ui/src/animations/components/domino/domino.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-25
+packages/web-dev-ui/src/animations/components/rattling-blocks/rattling-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-26
+packages/web-dev-ui/src/animations/components/scale-blocks/scale-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/yarn/yarn.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/loading-ripple/loading-ripple.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-43
+packages/web-dev-ui/src/animations/components/flip-blocks/flip-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/ripple/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/walking-cat/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/clattering-panel/clattering-panel.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-24
+packages/web-dev-ui/src/animations/components/braking-box/braking-box.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/folding-panel/folding-panel.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/rolling-box/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/swap-blocks/swap-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/loading-orbit/loading-orbit.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/loading-squares/loading-squares.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/scroll-unroll/scroll-unroll.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-29
+packages/web-dev-ui/src/animations/components/like-burst/like-burst.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-35
+packages/web-dev-ui/src/animations/components/loading-wave/loading-wave.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-117
+packages/web-dev-ui/src/animations/components/download-bars/download-bars.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+.github/workflows/publish-web-dev-ui.yml
+  s_d7a352b3e5766b::t_bbf574b233d086 17-19,21
+packages/web-dev-ui/src/animations/components/diving-blocks/diving-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+tests/package-release.test.mjs
+  s_d7a352b3e5766b::t_2a76a8c3430137 82-85,182-185
+  s_d7a352b3e5766b::t_bbf574b233d086 1-6,8-10,12,17-34,38,40-62,64-65,226-242
+  s_d7a352b3e5766b::t_91e88eac56fc82 11,115-119
+  s_d7a352b3e5766b::t_a4aa8cec866e64 13-16,35-37,39
+apps/docs/tsconfig.json
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 21-33
+packages/web-dev-ui/src/animations/components/flower-cat/flower-cat.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/like-crosses/like-crosses.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-85
+packages/web-dev-ui/src/animations/components/rattling-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/bookmark-slide/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/ripple/ripple.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-20
+packages/web-dev-ui/src/animations/components/tissue/tissue.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+pnpm-lock.yaml
+  s_d7a352b3e5766b::t_a6b217c1150c99 48-53,57-59
+packages/web-dev-ui/src/animations/components/clattering-panel/clattering-panel.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/pop-ball/pop-ball.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-20
+packages/web-dev-ui/src/animations/components/like-crosses/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/like-crosses/like-crosses.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/loading-orbit/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+apps/docs/components/Sandbox.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 49-66
+packages/web-dev-ui/src/animations/components/loading-word/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+packages/web-dev-ui/src/animations/components/rolling-box/rolling-box.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-20
+.prettierignore
+  s_d7a352b3e5766b::t_c5b13b128397e1 7
+packages/web-dev-ui/src/animations/components/domino/domino.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/stacking-blocks/stacking-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/styled-system/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-9
+apps/docs/components/MarkdownDoc.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 12,15,75-76
+  s_d7a352b3e5766b::t_1bba10095e90e7 84-90
+packages/web-dev-ui/src/animations/catalog.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-488
+packages/web-dev-ui/src/animations/components/diving-blocks/diving-blocks.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-23
+packages/web-dev-ui/src/animations/components/pop-blocks/pop-blocks.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+.github/workflows/publish-package.yml
+  s_d7a352b3e5766b::t_bbf574b233d086 1-29,31-38,43-56,60
+  s_d7a352b3e5766b::t_9ee5335505250b 57-59
+packages/web-dev-ui/src/animations/components/bookmark-panels/bookmark-panels.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/licenses/css-animations.LICENSE
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-21
+packages/web-dev-ui/src/animations/components/tissue/tissue.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-25
+packages/web-dev-ui/src/animations/components/paint-lines/paint-lines.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-25
+.github/workflows/release-packages.yml
+  s_d7a352b3e5766b::t_bbf574b233d086 1-55,57
+packages/web-dev-ui/src/animations/components/bookmark-fold/bookmark-fold.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/flip-panel/flip-panel.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-32
+packages/web-dev-ui/src/animations/components/scribble/scribble.tsx
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-28
+packages/web-dev-ui/src/animations/styled-system/types.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-24
+packages/web-dev-ui/src/animations/components/braking-box/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+apps/docs/utils/docs.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 49-51,115-119
+packages/web-dev-ui/src/animations/components/stage-curtain/stage-curtain.styles.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-4
+packages/web-dev-ui/src/animations/components/swap-blocks/index.ts
+  s_d7a352b3e5766b::t_a0cb75f75b6d76 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.51-trip",
+  "base_commit_sha": "e10ec4a2be7c6e7446343d42866677adc13042e9",
+  "prompts": {},
+  "sessions": {
+    "s_d7a352b3e5766b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16185-1e7f-7be1-86e5-e88ee832585c",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
