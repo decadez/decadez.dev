@@ -18,7 +18,19 @@
       "@decadez/web-dev-ui/mdx": ["../../packages/web-dev-ui/src/mdx/index.ts"],
       "@/components/*": ["components/*"],
       "@/content/*": ["content/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@decadez/web-dev-ui/animations": [
+        "../../packages/web-dev-ui/src/animations/index.ts"
+      ],
+      "@decadez/web-dev-ui/animations/hooks": [
+        "../../packages/web-dev-ui/src/animations/hooks/index.ts"
+      ],
+      "@decadez/web-dev-ui/animations/theme": [
+        "../../packages/web-dev-ui/src/animations/theme/index.ts"
+      ],
+      "@decadez/web-dev-ui/animations/*": [
+        "../../packages/web-dev-ui/src/animations/components/*/index.ts"
+      ]
     },
     "allowJs": true,
     "incremental": true,
@@ -32,7 +44,8 @@
     "components/**/*.tsx",
     "content/**/*.ts",
     "content/**/*.tsx",
-    "utils/**/*.ts"
+    "utils/**/*.ts",
+    "examples/**/*.tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -46,9 +46,9 @@ export const routeTree: RouteItem[] = [
         section: "components",
       },
       {
-        path: "/components/site-header",
-        title: "SiteHeader",
-        description: "The site navigation composition.",
+        path: "/components/animations",
+        title: "Animations",
+        description: "43 scoped CSS animations with playback controls.",
         section: "components",
       },
       {
@@ -112,11 +112,11 @@ export const pages: DocPage[] = [
     docPath: "components/code.md",
   },
   {
-    path: "/components/site-header",
-    title: "SiteHeader",
-    description: "The site navigation composition.",
-    breadcrumbs: ["Docs", "Components", "SiteHeader"],
-    docPath: "components/site-header.md",
+    path: "/components/animations",
+    title: "Animations",
+    description: "CSS motion, loaders and playful interactions.",
+    breadcrumbs: ["Docs", "Components", "Animations"],
+    docPath: "components/animations.md",
   },
   {
     path: "/components/mdx",

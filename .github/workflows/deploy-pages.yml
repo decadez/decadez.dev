@@ -5,9 +5,15 @@ on:
     branches:
       - main
       - dev/**
+    paths-ignore:
+      - "apps/api/**"
+      - "packages/nest-infra/**"
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - "apps/api/**"
+      - "packages/nest-infra/**"
   workflow_dispatch:
 
 permissions:
@@ -46,8 +52,11 @@ jobs:
       - name: Build UI package
         run: pnpm --filter @decadez/web-dev-ui build
 
+      - name: Verify animation package
+        run: node --test tests/ui-animations.test.mjs
+
       - name: Lint
-        run: pnpm lint
+        run: pnpm --filter @decadez/web --filter @decadez/docs --filter @decadez/web-dev-ui lint
 
       - name: Check formatting
         run: pnpm format:check

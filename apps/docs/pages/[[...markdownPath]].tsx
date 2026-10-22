@@ -2,7 +2,6 @@ import type { GetStaticPaths, GetStaticProps } from "next";
 import { Page } from "@/components/Layout/Page";
 import type { RouteItem, TocItem } from "@/utils/docs";
 import { getPageByPath } from "@/utils/docs";
-import { getTocFromMarkdown, readDocSource } from "@/utils/markdown";
 import { getRouteMeta, getStaticDocPaths, normalizePath } from "@/utils/routes";
 
 type Props = {
@@ -45,6 +44,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const { getTocFromMarkdown, readDocSource } =
+    await import("@/utils/markdown.server");
   const path = normalizePath(params?.markdownPath as string[] | undefined);
   const page = getPageByPath(path);
 

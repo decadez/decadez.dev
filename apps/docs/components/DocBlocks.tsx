@@ -1,6 +1,5 @@
-import { useState } from "react";
 import type { ReactNode } from "react";
-import { Card, CardBody, SiteHeader } from "@decadez/web-dev-ui";
+import { Card, CardBody } from "@decadez/web-dev-ui";
 
 export function ComponentCard({
   title,
@@ -37,32 +36,4 @@ export function ExamplePanel({
 
 export function Callout({ children }: { children: ReactNode }) {
   return <div className="docs-callout">{children}</div>;
-}
-
-export function HeaderPreview() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-  return (
-    <ExamplePanel flush>
-      <div className={`${theme} docs-header-demo`}>
-        <SiteHeader
-          brandHref="#"
-          brandLabel="decadez"
-          brandAccent=".dev"
-          navLinks={[
-            { url: "#whoami", text: "Who am i?" },
-            { url: "#projects", text: "Projects" },
-            { url: "#blog", text: "Blog" },
-            { url: "#contact", text: "Contact" },
-          ]}
-          currentSection="blog"
-          theme={theme}
-          onThemeToggle={() =>
-            setTheme((current) => (current === "dark" ? "light" : "dark"))
-          }
-          navClassName="docs-header-preview"
-        />
-      </div>
-    </ExamplePanel>
-  );
 }

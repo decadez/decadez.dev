@@ -13,7 +13,6 @@ import { html } from "@codemirror/lang-html";
 import { javascript } from "@codemirror/lang-javascript";
 import { highlightTree, tags } from "@lezer/highlight";
 import rangeParser from "parse-numeric-range";
-import { CustomTheme } from "./sandpack/Themes";
 
 interface InlineHighlight {
   step: number;
@@ -84,7 +83,7 @@ export function CodeBlock({
   const tree = lang.language.parser.parse(code);
   const tokenStarts = new Map<number, string>();
   const tokenEnds = new Map<number, string>();
-  const highlightTheme = getSyntaxHighlight(CustomTheme);
+  const highlightTheme = getSyntaxHighlight();
 
   highlightTree(tree, highlightTheme, (from, to, className) => {
     tokenStarts.set(from, className);
@@ -257,7 +256,7 @@ export function CodeBlock({
     <div
       dir="ltr"
       className={cn(
-        "sandpack sandpack--codeblock ui-mdx-code-block",
+        "ui-mdx-code-block",
         !noMargin && "ui-mdx-code-block--margin",
         noShadow && "ui-mdx-code-block--flat"
       )}
@@ -287,7 +286,7 @@ function classNameToken(name: string): string {
   return `sp-syntax-${name}`;
 }
 
-function getSyntaxHighlight(theme: typeof CustomTheme): HighlightStyle {
+function getSyntaxHighlight(): HighlightStyle {
   return HighlightStyle.define([
     { tag: tags.link, textDecoration: "underline" },
     { tag: tags.emphasis, fontStyle: "italic" },
@@ -310,7 +309,7 @@ function getSyntaxHighlight(theme: typeof CustomTheme): HighlightStyle {
     { tag: tags.propertyName, class: classNameToken("property") },
     {
       tag: [tags.literal, tags.inserted],
-      class: classNameToken(theme.syntax.string ? "string" : "static"),
+      class: classNameToken("string"),
     },
     { tag: tags.punctuation, class: classNameToken("punctuation") },
     { tag: [tags.comment, tags.quote], class: classNameToken("comment") },

@@ -4,25 +4,7 @@ Use `Button` for in-page actions and `LinkButton` when the control navigates to 
 
 ## Code demo
 
-```tsx sandbox
-import { Button, LinkButton } from "@decadez/web-dev-ui";
-import "@decadez/web-dev-ui/styles.css";
-
-export default function App() {
-  return (
-    <main className="demo">
-      <div className="demo-row">
-        <Button>Primary</Button>
-        <Button variant="outline">Outline</Button>
-        <Button variant="ghost">Ghost</Button>
-        <LinkButton href="https://decadez.github.io/decadez.dev/">
-          Visit site
-        </LinkButton>
-      </div>
-    </main>
-  );
-}
-```
+<ExamplePreview name="button" />
 
 ## API
 

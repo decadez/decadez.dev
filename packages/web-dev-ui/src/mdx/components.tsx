@@ -10,7 +10,6 @@ import {
   MDXPre,
 } from "./typography";
 import { MDXCallout } from "./callout";
-import { MDXSandbox } from "./sandbox";
 
 export const mdxComponents = {
   h1: (props: ComponentProps<"h1">) => <MDXHeading level={1} {...props} />,
@@ -26,5 +25,4 @@ export const mdxComponents = {
   pre: MDXPre,
   blockquote: MDXBlockquote,
   Callout: MDXCallout,
-  Sandpack: MDXSandbox,
 };

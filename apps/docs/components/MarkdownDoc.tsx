@@ -6,10 +6,13 @@ import {
   InlineCode,
   Link,
   MDXParagraph,
-  MDXSandbox,
 } from "@decadez/web-dev-ui/mdx";
+import { MDXSandbox } from "./Sandbox";
+import { ExamplePreview } from "./ExamplePreview";
+import { AnimationGallery } from "./AnimationGallery";
 import { MdxComponentGallery } from "./MdxComponentGallery";
 import { getHeadingId } from "@/utils/headings";
+import { sandboxStyles } from "@/utils/sandbox-styles";
 import { getSandboxAppFile } from "@/utils/sandbox";
 
 type Token =
@@ -69,12 +72,23 @@ function renderToken(token: Token, index: number) {
         <MDXParagraph key={index}>{renderInline(token.text)}</MDXParagraph>
       );
     case "component":
+      if (token.name === "AnimationGallery")
+        return <AnimationGallery key={index} />;
       if (token.name === "MdxComponentGallery") {
         return <MdxComponentGallery key={index} />;
       }
 
       return null;
     case "code":
+      if (token.meta.startsWith("example=")) {
+        return (
+          <ExamplePreview
+            key={index}
+            name={token.meta.slice(8)}
+            code={token.code}
+          />
+        );
+      }
       if (token.meta.includes("sandbox")) {
         const appFile = getSandboxAppFile(token.language);
         return (
@@ -244,146 +258,3 @@ function renderInline(text: string) {
     return part;
   });
 }
-
-const sandboxStyles = `.demo {
-  display: grid;
-  min-height: 220px;
-  gap: 16px;
-  place-items: center;
-}
-
-.demo-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
-
-.demo-card {
-  display: grid;
-  gap: 12px;
-  width: min(100%, 360px);
-}
-
-.demo-card h2,
-.demo-card p {
-  margin: 0;
-}
-
-.demo-card h2 {
-  font-size: 22px;
-}
-
-.demo-card p {
-  line-height: 1.6;
-}
-
-.main-nav {
-  position: relative !important;
-  inset: auto !important;
-  z-index: 1;
-  width: min(100%, 44rem);
-  height: auto !important;
-  min-height: 4rem;
-  padding: 0 1rem;
-  border: 1px solid rgb(143 121 217 / 0.16);
-  border-radius: 12px;
-  background: rgb(249 250 251 / 0.92);
-  box-shadow: 0 14px 34px rgb(29 42 53 / 0.12);
-  backdrop-filter: blur(14px);
-}
-
-.main-nav > div {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  min-height: 4rem;
-  padding: 12px 0;
-}
-
-.main-nav a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.main-nav > div > a {
-  display: inline-flex;
-  flex: 1 1 100%;
-  min-width: 0;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: #1d2a35;
-  font-size: 20px;
-  font-weight: 650;
-}
-
-.main-nav > div > a span span {
-  color: #8f79d9;
-}
-
-.main-nav nav {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.site-header-nav-menu {
-  position: static !important;
-  width: auto !important;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-  transform: none !important;
-}
-
-.site-header-nav-menu ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.site-header-nav-link {
-  display: inline-flex;
-  align-items: center;
-  width: auto;
-  color: #1d2a35;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.site-header-nav-link:hover {
-  color: #8f79d9;
-}
-
-.site-header-nav-icon {
-  display: none;
-}
-
-.main-nav button {
-  display: inline-flex;
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: #1d2a35;
-  cursor: pointer;
-}
-
-.main-nav button svg:first-child {
-  display: none;
-}
-
-.main-nav button svg:last-child {
-  display: inline-block;
-}`.trim();

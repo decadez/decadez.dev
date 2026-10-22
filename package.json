@@ -14,7 +14,9 @@
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "publish:nest-infra": "pnpm --filter @decadez/nest-infra publish --access public",
-    "publish:web-dev-ui": "pnpm --filter @decadez/web-dev-ui publish --access public"
+    "publish:web-dev-ui": "pnpm --filter @decadez/web-dev-ui publish --access public",
+    "test:release": "node --test tests/package-release.test.mjs",
+    "test:animations": "pnpm --filter @decadez/web-dev-ui build && node --test tests/ui-animations.test.mjs"
   },
   "devDependencies": {
     "prettier": "^3.9.4"

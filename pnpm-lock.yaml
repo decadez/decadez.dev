@@ -45,9 +45,18 @@ importers:
 
   apps/docs:
     dependencies:
+      '@codesandbox/sandpack-client':
+        specifier: ^2.19.8
+        version: 2.19.8
+      '@codesandbox/sandpack-react':
+        specifier: ^2.20.0
+        version: 2.20.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@decadez/web-dev-ui':
         specifier: workspace:*
         version: link:../../packages/web-dev-ui
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
       next:
         specifier: ^16.2.10
         version: 16.2.10(@babel/core@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -192,12 +201,6 @@ importers:
       '@codemirror/language':
         specifier: ^6.12.4
         version: 6.12.4
-      '@codesandbox/sandpack-client':
-        specifier: ^2.19.8
-        version: 2.19.8
-      '@codesandbox/sandpack-react':
-        specifier: ^2.20.0
-        version: 2.20.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@lezer/highlight':
         specifier: ^1.2.3
         version: 1.2.3

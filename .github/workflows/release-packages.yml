@@ -1,0 +1,57 @@
+name: Release changed packages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: package-releases
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.release.outputs.matrix }}
+      has-packages: ${{ steps.release.outputs.has-packages }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: node --test tests/package-release.test.mjs
+      - name: Prepare and persist package versions
+        id: release
+        env:
+          RELEASE_BEFORE: ${{ github.event.before }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          node scripts/package-release.mjs
+
+  publish:
+    needs: prepare
+    if: needs.prepare.outputs.has-packages == 'true'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    uses: ./.github/workflows/publish-package.yml
+    with:
+      directory: ${{ matrix.directory }}
+      ref: ${{ matrix.ref }}
+    secrets: inherit

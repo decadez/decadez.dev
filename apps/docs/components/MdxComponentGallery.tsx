@@ -1,4 +1,9 @@
 import {
+  MDXSandbox,
+  ErrorMessage,
+  OpenInTypeScriptPlaygroundButton,
+} from "./Sandbox";
+import {
   BlogCard,
   Challenge,
   Challenges,
@@ -10,7 +15,6 @@ import {
   Diagram,
   DiagramGroup,
   ErrorDecoder,
-  ErrorMessage,
   ExpandableCallout,
   ExpandableExample,
   H1,
@@ -29,8 +33,6 @@ import {
   MDXList,
   MDXListItem,
   MDXParagraph,
-  MDXSandbox,
-  OpenInTypeScriptPlaygroundButton,
   PackageImport,
   Recap,
   SimpleCallout,
@@ -103,20 +105,14 @@ export const reactDevMdxComponentNames = [
   "BlogCard",
   "Challenge",
   "Challenges",
-  "ChallengeNavigation",
-  "ClearButton",
   "CodeBlock",
   "CodeDiagram",
   "ConsoleBlock",
   "ConsoleBlockMulti",
   "ConsoleLogLine",
-  "CustomPreset",
-  "CustomTheme",
   "Diagram",
   "DiagramGroup",
-  "DownloadButton",
   "ErrorDecoder",
-  "ErrorMessage",
   "ExpandableCallout",
   "ExpandableExample",
   "H1",
@@ -131,34 +127,16 @@ export const reactDevMdxComponentNames = [
   "LanguagesContext",
   "LearnMore",
   "Link",
-  "LoadingOverlay",
   "MDXComponents",
-  "NavigationBar",
-  "OpenInCodeSandboxButton",
-  "OpenInTypeScriptPlaygroundButton",
   "PackageImport",
-  "Preview",
   "ReadBlogPost",
   "Recap",
-  "ReloadButton",
-  "RscFileBridge",
-  "SandpackClient",
-  "SandpackConsole",
-  "SandpackRSC",
-  "SandpackRoot",
-  "SandpackRSCRoot",
-  "SandpackWithHTMLOutput",
   "SimpleCallout",
   "Solution",
   "TeamMember",
   "TerminalBlock",
   "TocContext",
   "YouWillLearnCard",
-  "createFileMap",
-  "runESLint",
-  "template",
-  "templateRSC",
-  "useSandpackLint",
 ] as const;
 
 export function MdxComponentGallery() {
@@ -204,7 +182,10 @@ export function MdxComponentGallery() {
               </MDXParagraph>
             </ExpandableCallout>
             <ExpandableExample title="ExpandableExample">
-              <PackageImport name="MDXSandbox" path="@decadez/web-dev-ui/mdx" />
+              <PackageImport
+                name="SimpleCallout"
+                path="@decadez/web-dev-ui/mdx"
+              />
             </ExpandableExample>
           </div>
         </div>
@@ -273,8 +254,8 @@ export function MdxComponentGallery() {
       <section id="sandbox" className="docs-section">
         <H2>Sandbox</H2>
         <MDXParagraph>
-          The main sandbox uses Sandpack: source files create an isolated live
-          preview.
+          The docs playground uses Sandpack: source files create an isolated
+          live preview.
         </MDXParagraph>
         <MDXSandbox
           activeFile="/src/App.js"
@@ -288,7 +269,7 @@ export function MdxComponentGallery() {
         <MDXParagraph>
           Provider-bound pieces such as NavigationBar, Preview, Console,
           LoadingOverlay, RscFileBridge, and the action buttons render inside
-          the live sandbox above. Standalone helpers can be composed directly.
+          the docs playground above. These helpers are local to apps/docs.
         </MDXParagraph>
         <div className="docs-card-grid docs-card-grid--compact">
           <ErrorMessage

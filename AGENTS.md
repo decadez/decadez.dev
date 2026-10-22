@@ -52,7 +52,7 @@ apps/
   docs/     Next.js documentation site for shared UI/MDX components
   api/      NestJS API service
 packages/
-  web-dev-ui/   Shared React UI and MDX/Sandpack components
+  web-dev-ui/   Shared React UI and MDX components
   nest-infra/   Shared NestJS infrastructure providers
 ```
 

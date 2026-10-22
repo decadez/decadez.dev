@@ -1,4 +1,6 @@
 @import "@decadez/web-dev-ui/styles.css";
+@import "./components/sandpack/styles.css";
+@import "./examples/styles.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -320,49 +322,6 @@ body {
   background: rgb(38 35 59 / 0.82);
 }
 
-.docs-header-demo {
-  container-type: inline-size;
-  position: relative;
-  min-height: 7rem;
-  overflow: hidden;
-  background: #1d2a35;
-}
-
-.docs-header-preview {
-  position: relative !important;
-  top: 0 !important;
-}
-
-@container (max-width: 56rem) {
-  .docs-header-demo .docs-header-preview .site-header-nav-menu {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    width: 91.6667%;
-    transform: translateX(-50%);
-    border-radius: 0.25rem;
-    background: #f9fafb;
-    filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.15));
-    backdrop-filter: blur(24px);
-  }
-
-  .dark .docs-header-demo .docs-header-preview .site-header-nav-menu {
-    background: #22323f;
-    color: #f9fafb;
-  }
-
-  .docs-header-demo .docs-header-preview .site-header-nav-link {
-    width: 4.5rem;
-    margin-right: 0;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  .docs-header-demo .docs-header-preview .site-header-nav-icon {
-    display: inline;
-  }
-}
-
 .docs-pager {
   display: grid;
   grid-template-columns: 1fr;
@@ -496,4 +455,112 @@ body {
   .docs-toc-inner {
     padding-top: 5rem;
   }
+}
+
+.docs-example-preview {
+  margin: 1.5rem 0;
+  border: 1px solid rgb(143 121 217 / 0.2);
+  border-radius: 10px;
+  min-width: 0;
+  overflow: hidden;
+}
+.docs-preview-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgb(143 121 217 / 0.2);
+}
+.docs-preview-toolbar button {
+  border: 1px solid rgb(143 121 217 / 0.3);
+  border-radius: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.docs-preview-toolbar button[aria-pressed="true"] {
+  background: #8f79d9;
+  color: white;
+}
+.docs-preview-stage {
+  padding: 24px;
+  min-height: 180px;
+}
+
+/* The preview owns its frame; embedded views meet the toolbar edge directly. */
+.docs-example-preview > .ui-mdx-code-block {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.docs-example-preview .ui-mdx-sandbox {
+  margin: 0;
+}
+
+.docs-example-preview .ui-mdx-sandbox .sp-wrapper {
+  border: 0;
+  border-radius: 0;
+}
+
+.docs-example-preview .ui-sandpack-shell {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.docs-preview-toolbar > button:last-child {
+  margin-inline-start: auto;
+}
+
+.docs-preview-toolbar button:focus-visible {
+  outline: 2px solid #8f79d9;
+  outline-offset: 2px;
+}
+
+.docs-preview-toolbar button:hover:not([aria-pressed="true"]) {
+  background: rgb(143 121 217 / 0.08);
+}
+
+.dark .docs-example-preview,
+.dark .docs-preview-toolbar {
+  border-color: rgb(227 201 250 / 0.16);
+}
+
+.dark .docs-preview-toolbar button {
+  border-color: rgb(227 201 250 / 0.24);
+}
+
+.docs-animation-picker {
+  display: grid;
+  gap: 8px;
+  max-width: 26rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.docs-animation-picker select {
+  width: 100%;
+  border: 1px solid rgb(143 121 217 / 0.3);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #f9fafb;
+  color: #1d2a35;
+  font: inherit;
+}
+.dark .docs-animation-picker select {
+  background: #22323f;
+  color: #f9fafb;
+}
+.docs-animation-demo {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
+.docs-animation-demo > .demo-row {
+  display: flex;
+  gap: 8px;
 }

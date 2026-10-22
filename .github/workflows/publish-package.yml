@@ -1,0 +1,60 @@
+name: Publish package
+
+on:
+  workflow_call:
+    inputs:
+      directory:
+        required: true
+        type: string
+      ref:
+        required: true
+        type: string
+    secrets:
+      NPM_TOKEN:
+        required: true
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: publish-${{ inputs.directory }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - name: Verify persisted main release
+        env:
+          PACKAGE_DIRECTORY: ${{ inputs.directory }}
+        run: node scripts/package-release.mjs verify-release "$PACKAGE_DIRECTORY"
+      - run: pnpm install --frozen-lockfile
+      - name: Check published version
+        id: registry
+        env:
+          PACKAGE_DIRECTORY: ${{ inputs.directory }}
+        run: node scripts/package-release.mjs check-published "$PACKAGE_DIRECTORY"
+      - name: Validate and publish
+        if: steps.registry.outputs.published != 'true'
+        env:
+          PACKAGE_DIRECTORY: ${{ inputs.directory }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          pnpm --dir "$PACKAGE_DIRECTORY" lint
+          pnpm --dir "$PACKAGE_DIRECTORY" build
+          if [ "$PACKAGE_DIRECTORY" = "packages/web-dev-ui" ]; then
+            node --test tests/ui-animations.test.mjs
+          fi
+          pnpm --dir "$PACKAGE_DIRECTORY" publish --access public --no-git-checks --provenance

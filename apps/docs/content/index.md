@@ -20,4 +20,4 @@ Components use a parent `dark` class to switch themes. This keeps the package co
 
 ## Package shape
 
-The package contains primitives for actions, cards, badges, code, layout helpers, and the site navigation composition used by decadez.dev.
+The package contains primitives for actions, cards, badges, code, and layout helpers.

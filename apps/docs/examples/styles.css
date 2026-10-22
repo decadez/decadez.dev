@@ -1,0 +1,32 @@
+.docs-example-preview .demo {
+  display: grid;
+  min-height: 220px;
+  gap: 16px;
+  place-items: center;
+}
+
+.docs-example-preview .demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.docs-example-preview .demo-card {
+  display: grid;
+  gap: 12px;
+  width: min(100%, 360px);
+}
+
+.docs-example-preview .demo-card h2,
+.docs-example-preview .demo-card p {
+  margin: 0;
+}
+
+.docs-example-preview .demo-card h2 {
+  font-size: 22px;
+}
+
+.docs-example-preview .demo-card p {
+  line-height: 1.6;
+}
