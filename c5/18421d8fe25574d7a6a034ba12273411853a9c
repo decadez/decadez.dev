@@ -1,0 +1,22 @@
+scripts/package-release.mjs
+  s_d7a352b3e5766b::t_f5d9170192af34 202-205
+tests/package-release.test.mjs
+  s_d7a352b3e5766b::t_fe06fa32064887 84-89,97-111,120-122,135-142,151-154,161-162
+  s_d7a352b3e5766b::t_1af833198dc7c8 73-79,90-96,112-119,123-134,143-150,155-160
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.51-trip",
+  "base_commit_sha": "c518421d8fe25574d7a6a034ba12273411853a9c",
+  "prompts": {},
+  "sessions": {
+    "s_d7a352b3e5766b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16185-1e7f-7be1-86e5-e88ee832585c",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "decadez <cong_z@trip.com>"
+    }
+  }
+}
